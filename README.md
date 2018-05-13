@@ -1,4 +1,4 @@
-# Wow , entonces quieres unirte?
+# WOW , entonces quieres unirte a NodeSchool San Miguel?
 Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " Quiero unirme! " y pronto nos pondremos en contacto con tigo
 
 ## Cuanto cuesta?
