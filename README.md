@@ -5,6 +5,6 @@ Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " Qu
 Bueno es completamente gratis, así que , que estas esperando ??
 
 ## Razones para unirte
-[x] Gratis!
-[x] Una comunidada muy buena
-[x] Compartimos concocimiento sin importar nada
+- [x] Gratis!
+- [x] Una comunidada muy buena
+- [x] Compartimos concocimiento sin importar nada
