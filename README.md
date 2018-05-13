@@ -6,5 +6,6 @@ Bueno es completamente gratis, así que , que estas esperando ??
 
 ## Razones para unirte
 - [x] Gratis!
-- [x] Una comunidada muy buena
+- [x] Una comunidad muy buena
 - [x] Compartimos concocimiento sin importar nada
+- [x] Dije ya que lo que hacemos es compartir conocimiento?
