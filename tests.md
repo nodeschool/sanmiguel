@@ -3,7 +3,7 @@
 probar tu nivel de conocimiento del lenguaje de programación javascript
 
 ## Ejemplo
-- dado la variable romanos que contiene cadenas de texto denotando numeros romanos crear una funcion 
+- dada la variable romanos conteniendo texto denotando numeros romanos, crear una funcion 
 que retorne su valor en numeros enteros **{Basico - Intermedio}**
 ```javascript
   let romanos = "MCMXCVIII"
