@@ -10,10 +10,11 @@
 |**Practica Mensual**|4hrs|
 |Introduccion a JSON| 4hrs|
 |Manupulacion de Objetos y Arreglos **{Intermedio}**|8hrs|
+|Introduccion al DOM|4hrs|
+|**Practica Mensual**|4hrs|
 
 
 ## Mentores
 - Denny Portillo
 - Pastore Baires
 - Mauricio Martinez
-- Albery Arteaga
