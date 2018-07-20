@@ -4,14 +4,14 @@
 - https://www.w3schools.com/jsref/met_document_createelement.asp
 
 # reto
-crear una funcion que retorne caracteres aleatorios del alfabeto  y mostrar cada conjunto de caracteres como nuevos nodos en el documento
+crear una funcion que retorne caracteres aleatorios del alfabeto  y mostrar cada conjunto de caracteres como nuevos nodos en el documento quedan libre de usar metodos como sea necesario
 
 ## ejemplo
 ```javascript
 let p = function(){
   return "aabbcc".split("").sort((a,b)=>Math.random()-0.5).join("")
 }
-// salida : aleatoria , copiar ejemplo
+console.log(p())// salida : aleatoria , copiar ejemplo
 ```
 
 ## limitantes
