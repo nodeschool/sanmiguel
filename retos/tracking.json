@@ -1,11 +1,11 @@
 {
-  "ID":{
+  "id":{
     "r1": "Mario alvarenga" ,
     "r2": "Arnoldo Umaña",
     "r3": "Erick"
 
   },
-  "Challenges":{
+  "challenges":{
     "Virtual Dom Basis" : "r1 r3",
     "Array Objects": "r1 r2 r3"
   }
