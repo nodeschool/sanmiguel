@@ -21,3 +21,6 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 ### [Ejemplo de test :shipit::shipit::shipit::zap:](tests.md)
 
 ## [RankBoard](https://rank-board.herokuapp.com/)
+
+# Colaborar
+Intentemos mantener la master limpia y hagamos PR cada vez hagamos un update
