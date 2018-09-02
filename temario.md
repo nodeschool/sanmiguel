@@ -16,5 +16,4 @@
 
 ## Mentores
 - Denny Portillo
-- Pastore Baires
 - Mauricio Martinez

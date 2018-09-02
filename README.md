@@ -20,7 +20,20 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 ### [Mirar el temario :tada::tada::zap::zap:](temario.md)
 ### [Ejemplo de test :shipit::shipit::shipit::zap:](tests.md)
 
-## [RankBoard](https://rank-board.herokuapp.com/)
+# Tablero de Pocisiones
+[Ir al tablero](https://rank-board.herokuapp.com/)
+
+# Agenda para cada Sábado
+
+| Hora | Actividad |
+|-|-|
+| 09:00 - 09:10| WarmUp|
+| 09:10 - 10:20| Charla Teórica|
+| 10:20 - 10:30| Problema para Practica|
+| 10:30 - 10:50| Receso|
+| 10:50 - 11:30| Practica
+| 11:30 - 11:55| Expocisión de resolución|
+| 11:55 - 12:00| PicTime|
 
 # Colaborar
-Intentemos mantener la master limpia y hagamos PR cada vez hagamos un update
+Intentemos mantener la master limpia y hagamos PR cada vez que hagamos una update
