@@ -1,8 +1,7 @@
 # WOW , entonces quieres unirte a NodeSchool San Miguel?
 Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " __Quiero unirme!__ " y pronto nos pondremos en contacto contigo
 
-
-<img src="./logo.svg" style="display: block; max-width: 40%; min-width: 12rem; margin: 0 auto">
+![](./logo.svg)
 
 # ¿Cuánto cuesta?
 Bueno es completamente gratis,¿Qué estás esperando para ser parte de nosotros?
@@ -18,12 +17,12 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 , ya que es un lugar algo centrico de San Miguel
 
 # Miscellaneous
-- [Mirar el temario :tada::tada::zap::zap:](temario.md)
-- [Ejemplo de test :shipit::shipit::shipit::zap:](tests.md)
+- [Mirar el temario](temario.md)
+- [Ejemplo de test](tests.md)
 
 # Tablero de Pocisiones
 - [Ir al tablero](https://rank-board.herokuapp.com/)
-- [Ir al repo](https://github.com/D3Portillo/nodeschoolsm-ranking)
+- [Ir al repositorio del tablero](https://github.com/D3Portillo/nodeschoolsm-ranking)
 
 # Agenda para cada Sábado
 
