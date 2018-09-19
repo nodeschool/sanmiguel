@@ -37,4 +37,12 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 | 11:55 - 12:00| PicTime|
 
 # Colaborar
-Intentemos mantener la master limpia y hagamos PR cada vez que hagamos una update
+[![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
+
+Intentemos mantener la master limpia y hagamos PR cada vez que hagamos una update, edita la carpeta website, para iniciar
+
+```javascript
+yarn install && yarn start
+```
+
+> empieza a editar /website/src , realiza un cambio chivo y luego haz un __git add__ con un comentario, de preferencia hace un git commit , luego en la consola , comenta en resumen / no tan corto / todos los cambios realizados
