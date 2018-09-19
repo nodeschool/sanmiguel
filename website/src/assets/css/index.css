@@ -1,0 +1,20 @@
+table {
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+th {
+  text-align: center !important;
+  padding: 0.8rem 0.5rem
+}
+
+td {
+  min-width: 9rem;
+  padding: 0.8rem 0.5rem
+}
+
+@media all and (max-width: 30rem) {
+  .willhide {
+    display: none !important;
+  }
+}
