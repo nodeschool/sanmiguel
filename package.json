@@ -2,6 +2,7 @@
   "name": "nodeschoolsm",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://nodeschool.io/sanmiguel/",
   "scripts": {
     "build": "cd website && yarn install && yarn build"
   }
