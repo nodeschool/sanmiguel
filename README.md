@@ -4,13 +4,12 @@ Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " __
 ![](./logo.svg)
 
 # ¿Cuánto cuesta?
-Bueno es completamente gratis,¿Qué estás esperando para ser parte de nosotros?
+Bueno es completamente gratis, ¿Qué estás esperando para ser parte de nosotros? :dancer:
 
 # Razones para unirte
-- [x] Gratis!
-- [x] Una comunidad muy buena
-- [x] Compartimos concocimiento sin importar nada
-- [x] Dije ya que lo que hacemos es compartir conocimiento?
+- [x] Gratis! :see_no_evil:
+- [x] Una comunidad muy buena :nail_care:
+- [x] Compartimos concocimiento sin importar nada :information_desk_person:
 
 # ¿Dónde estamos ubicados?
 Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuve+Swimming+Pool/@13.4805052,-88.1763071,17z/data=!3m1!4b1!4m5!3m4!1s0x8f7b2a7a14f8d5c3:0x385d67c125f3654!8m2!3d13.4805052!4d-88.1741184)
@@ -19,10 +18,6 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 # Miscellaneous
 - [Mirar el temario](temario.md)
 - [Ejemplo de test](tests.md)
-
-# Tablero de Pocisiones
-- [Ir al tablero](https://rank-board.herokuapp.com/)
-- [Ir al repositorio del tablero](https://github.com/D3Portillo/nodeschoolsm-ranking)
 
 # Agenda para cada Sábado
 
@@ -39,10 +34,10 @@ Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuv
 # Colaborar
 [![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
 
-Intentemos mantener la master limpia y hagamos PR cada vez que hagamos una update, edita la carpeta website, para iniciar
+Intentemos mantener la master limpia :heavy_check_mark: y hagamos PR cada vez que hagamos una update, edita la carpeta website, para iniciar haz un
 
 ```javascript
 yarn install && yarn start
 ```
 
-> empieza a editar /website/src , realiza un cambio chivo y luego haz un __git add__ con un comentario, de preferencia hace un git commit , luego en la consola , comenta en resumen / no tan corto / todos los cambios realizados
+> empieza a editar /website/src , realiza un cambio chivo y luego haz un __git add__ con un comentario, de preferencia hace un git commit , luego en la consola , comenta en resumen / no tan corto / todos los cambios realizados :rocket:
