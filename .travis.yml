@@ -5,7 +5,8 @@ cache:
   directories:
   - website/node_modules
 script:
-  - yarn build
+  - node  proximoMentor.js --token=$github_token
+  - yarn build 
 deploy:
   provider: pages
   skip_cleanup: true
