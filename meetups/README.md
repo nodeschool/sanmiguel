@@ -55,5 +55,5 @@ Si recien entras a la comunidad no te sientas mal y no dejes de asistir, al cont
   
 - DOM 
   - Virtual DOM y DOM HTML
-    - [Lectura](/DOM%20y%20Virtual%20DOM)
-    - [Practica](/jugando%20con%20el%20DOM)
+    - [Lectura](/DOM%20y%20Virtual%20DOM/)
+    - [Practica](/jugando%20con%20el%20DOM/README.md)
