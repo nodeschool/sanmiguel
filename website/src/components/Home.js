@@ -6,6 +6,9 @@ class App extends Component {
   render() {
     return (
       <div className="columns is-mobile is-multiline">
+      <Helmet>
+        <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet"/>
+      </Helmet>
         <div
           className="column is-12-mobile is-4-desktop has-background-warning"
           style={{ overflow: "auto", overflowX: "hidden" }}>
