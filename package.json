@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "scripts": {
+    "start":"cd website && yarn start",
     "build": "cd website && yarn install && yarn build"
   },
   "dependencies": {
