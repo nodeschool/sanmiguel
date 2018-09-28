@@ -5,13 +5,13 @@ import { Helmet } from "react-helmet"
 class App extends Component {
   render() {
     return (
-      <div className="columns is-mobile is-multiline">
+      <div className="columns is-mobile">
       <Helmet>
         <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet"/>
       </Helmet>
         <div
-          className="column is-12-mobile is-4-desktop has-background-warning"
-          style={{ overflow: "auto", overflowX: "hidden" }}>
+          className="column is-12-mobile is-4-tablet"
+          style={{ overflow: "auto", overflowX: "hidden", background: "#f0db4f" }}>
           <div className="column is-12 has-text-centered">
             <img
               src={logo}
@@ -25,11 +25,11 @@ class App extends Component {
           </div>
           <div className="section" style={{ paddingBottom: "20rem" }}>
             <div
-              className="container title is-size-1-mobile has-text-centered-mobile"
-              style={{ fontSize: "10rem" }}>
+              className="container title is-size-1-mobile has-text-centered-mobile has-text-dark"
+              style={{ fontSize: "10rem" , width: "calc(100vw - 1rem)"}}>
               SAN MIGUEL
             </div>
-            <p>
+            <p className="has-text-grey-dark">
               Somos una comunidad que se ha formado gracias a las ganas de
               querer aprender sobre las herramientas tecnológicas para el
               desarrollo Web y multiplataforma en general. Actualmente nos
@@ -46,9 +46,9 @@ class App extends Component {
             className="title is-hidden-mobile container"
             style={{
               marginTop: "25.6rem",
-              color: "#ffdd57",
+              color: "#f0db4f",
               fontSize: "10rem",
-              marginLeft: "calc(-33.333vw + 1.1rem)"
+              marginLeft: "calc(-33.333vw + 1.1rem)", width: "calc(100vw - 1rem)"
             }}>
             SAN MIGUEL
           </div>

@@ -5,7 +5,7 @@ cache:
   directories:
   - website/node_modules
 script:
-  - node  proximoMentor.js --token=$github_token
+  - node  proximoMentor.js --token=$github_token --fbuser=$fbuser
   - yarn build 
 deploy:
   provider: pages
