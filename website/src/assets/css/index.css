@@ -1,20 +1,9 @@
-table {
-  border-spacing: 0;
-  margin: 0 auto;
+@media screen and (max-width: 768px) {
+  
 }
 
-th {
-  text-align: center !important;
-  padding: 0.8rem 0.5rem
-}
-
-td {
-  min-width: 9rem;
-  padding: 0.8rem 0.5rem
-}
-
-@media all and (max-width: 30rem) {
-  .willhide {
-    display: none !important;
-  }
+body .particles-js-canvas-el{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
