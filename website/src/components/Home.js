@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet"
 import config from "../assets/js/particlesjs-config"
 class App extends Component {
   componentDidMount() {
-    window.onload =_=> window.particlesJS("particles", config)
+    window.onload = _ =>
+      window.innerWidth > 768 ? window.particlesJS("particles", config) : null
     window.onresize = _ => {
       window.particlesJS("particles", config)
       if (window.innerWidth <= 769) {

@@ -15,6 +15,10 @@ Bueno es completamente gratis, ¿Qué estás esperando para ser parte de nosotro
 Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuve+Swimming+Pool/@13.4805052,-88.1763071,17z/data=!3m1!4b1!4m5!3m4!1s0x8f7b2a7a14f8d5c3:0x385d67c125f3654!8m2!3d13.4805052!4d-88.1741184)
 , ya que es un lugar algo centrico de San Miguel
 
+# Soy nuevo y quiero leer sobre lo que han impartido en los MeetUps
+
+hmmm puedes ir al sector de [meetups](meetups)
+
 # Agenda para cada Sábado
 | Hora | Actividad |
 |-|-|
@@ -61,7 +65,6 @@ hostigan, observe que alguien más está siendo hostigado o tiene alguna inquiet
 contacto con un organizador de inmediato.
 
 # Miscellaneous
-- [Mirar el temario](temario.md)
 - [Ejemplo de test](tests.md)
 
 # Agradecimientos 
