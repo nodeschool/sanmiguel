@@ -58,4 +58,4 @@ Si recien entras a la comunidad no te sientas mal y no dejes de asistir, al cont
     - [Lectura](DOM%20y%20Virtual%20DOM/README.md)
     - [Practica](jugando%20con%20el%20DOM/README.md)
 - Introducción a ReactJS
-- [Lectura y Practica](introduccion%20%a%20%reactjs/README.md)
+  - [Lectura y Practica](introduccion%20a%20reactjs/README.md)
