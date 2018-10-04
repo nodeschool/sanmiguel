@@ -1,9 +1,87 @@
-@media screen and (max-width: 768px) {
-  
-}
-
-body .particles-js-canvas-el{
+body .particles-js-canvas-el {
   position: absolute;
   top: 0;
   right: 0;
+  animation: fadeIn 2s forwards
+}
+
+.hex {
+  float: left;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.hex:nth-child(3n + 1) {
+  margin-top: 38px;
+}
+
+.hex:nth-child(3n + 0) {
+  margin-top: 38px;
+}
+
+.hex {
+  margin: -8px;
+}
+
+.hex-row:not(:first-child) {
+  margin-top: -38px;
+}
+
+.hexes {
+  margin: 0 auto;
+  max-width: 260px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hexes-container {
+  position: relative;
+  background: #363636;
+  padding: 2rem;
+  margin: -2.5rem;
+  width: auto !important;
+}
+
+.hexes-container::before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  background: #363636;
+  width: 100%;
+  height: 0;
+  border-top: solid transparent 0;
+  border-right: solid 0 transparent;
+  border-bottom: solid #363636 2rem;
+  border-left: solid 34vw #f0db4f;
+}
+
+
+.feeder-{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+border-radius: 4px;
+width: 100%;
+max-width: 340px;
+height: 30rem;
+}
+
+.stargazers{
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  transform: rotate(-5deg);
+  color: #f0db4f
+}
+@media all and (max-width: 1087px){
+  body .particles-js-canvas-el{
+    display: none !important
+  }
+  .hexes-container::before{
+    border-left-width: 100vw;
+  }
+  .stargazers{
+    transform: rotate(-4deg)
+  }
 }

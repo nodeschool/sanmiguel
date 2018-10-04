@@ -123,3 +123,11 @@ Las apps nativas se desarrollan usando el lenguaje requerido por la plataforma d
 Con ReactNative Las vistas las crea de forma nativa. Esto significa que tiene un intérprete que a medida que la app se va ejecutando está lo lee del HTML y va colocando cada uno de los componentes nativos en su posición.
 
 Es decir, todas las interacciones con el usuario serán nativas.
+
+# Leer
+
+- RNExplorer
+- ReactJS Offline documentation
+- Expo
+- React Navigation
+- Array.fill
