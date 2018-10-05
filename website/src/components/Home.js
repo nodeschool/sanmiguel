@@ -21,10 +21,26 @@ class App extends Component {
       _ => console.log(this.state.stargazers)
     )
   }
+  getChunks = _ => {
+    const arr = Object.assign([], this.state.stargazers)
+    const r = []
+    let len = arr.length
+    for (let i = 0; i < len; i += 3) {
+      r.push(Object.assign([], arr).splice(i, 3))
+    }
+    return r.map((e, i) => (
+      <div className="hex-row" key={"hexrow" + i}>
+        {e.map(stargazer => {
+          len--
+          return <Hex stargazer={stargazer} index={len} key={len} even={e.length===1}/>
+        })}
+      </div>
+    ))
+  }
+
   iframe =
     '<iframe class="feeder- is-hidden-touch" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnodeschoolsm%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>'
   render() {
-    const len = this.state.stargazers.length
     return (
       <div className="columns is-mobile is-multiline">
         <div
@@ -66,110 +82,17 @@ class App extends Component {
                   __html: this.iframe
                 }}
                 className="column is-12 has-text-centered"
-                style={{ paddingTop: "3rem", marginBottom: "7rem"}}
+                style={{ paddingTop: "3rem", marginBottom: "7rem" }}
               />
             ) : null}
-           
+
             <div className="column has-text-centered is-12 hexes-container">
-            <h1
-              className="title has-text-centered is-size-2 stargazers">
-              <i className="icon ion-md-star is-size-2" /> STARGAZERS{" "}
-              <i className="icon ion-md-star is-size-2" />
-            </h1>
+              <h1 className="title has-text-centered is-size-2 stargazers">
+                <i className="icon ion-md-star is-size-2" /> STARGAZERS{" "}
+                <i className="icon ion-md-star is-size-2" />
+              </h1>
               <div className="hexes">
-                {this.state.stargazers
-                  ? Object.keys(this.state.stargazers).map((e, index) => {
-                      const isFull = (1 + index) % 3 === 0
-                      return isFull || len - 2 === index ? (
-                        <div className="hex-row" key={"hex-row" + index}>
-                          {new Array(isFull ? 3 : 2).fill(0, 0).map((e, i) => {
-                            const stargazer = this.state.stargazers[
-                              isFull ? index - i : 1 + index - i
-                            ]
-                            return (
-                              <a
-                                key={
-                                  "prof" + (isFull ? index - i : 1 + index - i)
-                                }
-                                className="hex animated fadeIn fast"
-                                href={stargazer.html_url}
-                                target="_blank"
-                                title={stargazer.login}>
-                                <svg
-                                  version="1.1"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="104"
-                                  height="91"
-                                  viewBox="0 0 104 90.06664199358161">
-                                  <defs>
-                                    <pattern
-                                      id={`stargazerPic${
-                                        isFull ? index - i : 1 + index - i
-                                      }`}
-                                      width="1"
-                                      height="1"
-                                      viewBox="0 0 100 100"
-                                      preserveAspectRatio="none"
-                                      dangerouslySetInnerHTML={{
-                                        __html: ` <image xlink:href='${
-                                          stargazer.avatar_url
-                                        }' width="100" height="100" preserveAspectRatio="none"></image>`
-                                      }}
-                                    />
-                                  </defs>
-                                  <path
-                                    stroke="#000"
-                                    strokeWidth="2px"
-                                    fill={`url(#stargazerPic${
-                                      isFull ? index - i : 1 + index - i
-                                    })`}
-                                    d="M0 45.033320996790806L26 0L78 0L104 45.033320996790806L78 90.06664199358161L26 90.06664199358161Z"
-                                  />
-                                </svg>
-                              </a>
-                            )
-                          })}
-                        </div>
-                      ) : len - 1 === index && index % 3 === 0 ? (
-                        <div className="hex-row" key={"hexrow" + index}>
-                          <a
-                            className="hex animated fadeIn fast"
-                            href={this.state.stargazers[index].html_url}
-                            target="_blank"
-                            title={this.state.stargazers[index].login}
-                            style={{ marginTop: "-8px", marginLeft: "76px" }}>
-                            <svg
-                              version="1.1"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="104"
-                              height="91"
-                              viewBox="0 0 104 90.06664199358161">
-                              <defs>
-                                <pattern
-                                  id={`stargazerPic${index}`}
-                                  width="1"
-                                  height="1"
-                                  viewBox="0 0 100 100"
-                                  preserveAspectRatio="none"
-                                  dangerouslySetInnerHTML={{
-                                    __html: ` <image xlink:href='${
-                                      this.state.stargazers[index].avatar_url
-                                    }' width="100" height="100" preserveAspectRatio="none"></image>`
-                                  }}
-                                />
-                              </defs>
-                              <path
-                                fill={`url(#stargazerPic${index})`}
-                                stroke="#000"
-                                strokeWidth="2px"
-                                d="M0 45.033320996790806L26 0L78 0L104 45.033320996790806L78 90.06664199358161L26 90.06664199358161Z"
-                              />
-                            </svg>
-                          </a>
-                        </div>
-                      ) : null
-                    })
-                  : null}
+                {this.state.stargazers ? this.getChunks() : null}
               </div>
             </div>
           </div>
@@ -197,6 +120,51 @@ class App extends Component {
       </div>
     )
   }
+}
+
+const Hex = ({ index, stargazer, even }) => {
+  console.log(index)
+  return (
+    <a
+      key={"prof" + index}
+      className="hex animated fadeIn fast"
+      href={stargazer.html_url}
+      target="_blank"
+      title={stargazer.login}
+      style={even ? { marginTop: "-8px", marginLeft: "76px" } : {}}>
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="104"
+        height="91"
+        viewBox="0 0 104 90.06664199358161">
+        <defs>
+          <pattern
+            id={`stargazerPic${index}`}
+            width="1"
+            height="1"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid slice"
+            dangerouslySetInnerHTML={{
+              __html: ` <image xlink:href='${
+                stargazer.avatar_url
+              }' width="100" height="100"></image>`
+            }}
+          />
+        </defs>
+        <path
+          stroke="#000"
+          strokeWidth="2px"
+          fill={`url(#stargazerPic${index})`}
+          d="M0 45.033320996790806L26 0L78 0L104 45.033320996790806L78 90.06664199358161L26 90.06664199358161Z"
+        />
+      </svg>
+    </a>
+  )
+}
+
+Hex.defaultProps = {
+  even: false
 }
 
 export default App
