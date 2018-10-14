@@ -76,16 +76,16 @@ print str(data)
 ```
 
 # URL's de redes sociales
-- [Youtube]("http://www.youtube.com")
-- [Facebook]("http://www.facebook.com")
+- [Youtube](http://www.youtube.com)
+- [Facebook](http://www.facebook.com)
 ```markdown
-- [Youtube]("http://www.youtube.com")
-- [Facebook]("http://www.facebook.com")
+- [Youtube](http://www.youtube.com)
+- [Facebook](http://www.facebook.com)
 ```
 
 # URL e imagen
 go to shiffmans site :heart_eyes:
-[![shiffman's site](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/campaign/357837/b8c292d8e8584b7c882f7a865a2b5c79/1?token-time=2145916800&token-hash=519Kez0kgZ2DB06-sOQMNGv5A7Pd_x7jQt0hixhclJo%3D)]("https://shiffman.net/")
+[![shiffman's site](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/campaign/357837/b8c292d8e8584b7c882f7a865a2b5c79/1?token-time=2145916800&token-hash=519Kez0kgZ2DB06-sOQMNGv5A7Pd_x7jQt0hixhclJo%3D)](https://shiffman.net/)
 
 ```markdown
 [![image alt](https://c10.patreonusercontent.com/3/eyJwIjoxfQ%3D%3D/patreon-media/p/campaign/357837/b8c292d8e8584b7c882f7a865a2b5c79/1?token-time=2145916800&token-hash=519Kez0kgZ2DB06-sOQMNGv5A7Pd_x7jQt0hixhclJo%3D)]("https://shiffman.net/")
@@ -94,5 +94,5 @@ go to shiffmans site :heart_eyes:
 # *[MardkDown CheatSheet]("https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf")*
 
 ```markdown
-# *[MardkDown CheatSheet]("https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf")*
+# *[MardkDown CheatSheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)*
 ```
