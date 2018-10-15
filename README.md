@@ -1,4 +1,4 @@
-# ¿Te interesa unirte a unirte a NodeSchool San Miguel?
+# ¿Te interesa unirte a NodeSchool San Miguel?
 Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " __Quiero unirme!__ " y pronto nos pondremos en contacto contigo
 
 ![](./logo.svg)
@@ -9,7 +9,7 @@ Bueno es completamente gratis, ¿Qué estás esperando para ser parte de nosotro
 # Razones para unirte
 - [x] ¡Completamente Gratis!
 - [x] Una comunidad proactiva dispuesta a colaborarte.
-- [x] Compartir el conocimiento es uno de nuestro principales objetivos.
+- [x] Compartir el conocimiento es uno de nuestros principales objetivos.
 
 La lista puede seguir...
 
