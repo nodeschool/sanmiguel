@@ -31,14 +31,16 @@ Debido a que hay casos en los cuales un miembro no puede asistir o eres alguien 
 | 11:30 - 11:55| Expocisión de resolución|
 | 11:55 - 12:00| PicTime|
 
-# Colaborar
+# ¿Deseas Colaborar?
 [![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
 
-Intentemos mantener la master limpia :heavy_check_mark: y hagamos PR cada vez que hagamos una update, edita la carpeta website, para iniciar haz un
-```javascript
-yarn install && yarn start
-```
-> empieza a editar /website/src , realiza un cambio chivo y luego haz un __git add__ con un comentario, de preferencia hace un git commit , luego en la consola , comenta en resumen / no tan corto / todos los cambios realizados :rocket:
+Puedes colaborar con el proyecto, ya sea asistiendo y tomando algún cargo dentro de l comunidad, o si prefieres colabora con el sitio web o cualquier otro archivo de este repositorio el cual creas que puede mejorar. Agradeceremos tu ayuda. Realiza el respectivo PR para que se evalue tu colaboración y se apruebe.
+
+En el caso que quieras colaborar con patrocinio a este proyecto y mejorar las condiciones para que siga creciendo, puedes contactarte con cualquier de los administradores. Cualquier ayuda será bienvenida.
+
+La mejor forma de que esto siga en ascenso es ayudando con la difusión del grupo, compartelo con tus conocidos y amigos. ¡Es una de las mejores formas de colaborar!
+
+Recuerda que puedes colaborar a mejorar el sitio web de la comunidad [Website](website)
 
 # Código de Conducta
 Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se necesita establecer un código de conducta el cual te invitamos a leer y respetarlo. [Código de Conducta](CODE_OF_CONDUCT.md)
