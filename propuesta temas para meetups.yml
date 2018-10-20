@@ -1,0 +1,51 @@
+charlas:
+  27-10-18:
+    - Web scrapping con python
+  - React & Redux
+  10-11-18:
+    - Data Visualization con JS
+  01-12-18:
+    - Creando pdf con js
+  - Plugins recomendados para un begginer en VSCode
+  10-11-18:
+    - Regular Expressions
+  17-11-18:
+    - UX/UI para Developers
+  27-10-18:
+    - Fundamentos basicos con Photoshop
+  - Almacenamiento Local en el Navegador
+  - AJAX
+  - Jquery
+  - Subiendo tu pagina web escogiendo el mejor Web Host
+  17-11-18:
+    - VueJS
+  - Bulma
+  - CSS Grid VS FlexBox
+  - SASS y SCSS
+  - WebWorkers y ServiceWorkers
+  - Fundamentos y Principios de Aplicaciones hibridas
+  - Progressive Web Apps
+  - Introduccion a Rust
+  - MongoDB
+  - Conociendo EMACS
+  - Base de datos relacionales y no relacionales
+  - Frameworks par CSS
+  01-12-18:
+    - TypeScript
+  - LAMP Stack
+  - Tu primer App con 
+  - Socket.io
+  - WordPress
+  - Automatizador de tareas
+  - Express
+  - Strapi
+  - Vitualizacion de Sistemas Operativos
+  - P5 y Proccessing
+proyectos:
+  08-12-18:
+    - Creando tu primer blog con MarkDown y GitHub
+  - Tu primer sitio web desde 0 / Sin Frameworks /
+  - Search Engine Optimization y Google Analytics
+  - Creando tu primera API con Express
+  - ToDo List con Jquery
+  
