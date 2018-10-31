@@ -2,37 +2,8 @@ body .particles-js-canvas-el {
   position: absolute;
   top: 0;
   right: 0;
-  animation: fadeIn 2s forwards
-}
-
-.hex {
-  float: left;
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-
-.hex:nth-child(3n + 1) {
-  margin-top: 38px;
-}
-
-.hex:nth-child(3n + 0) {
-  margin-top: 38px;
-}
-
-.hex {
-  margin: -8px;
-}
-
-.hex-row:not(:first-child) {
-  margin-top: -38px;
-}
-
-.hexes {
-  margin: 0 auto;
-  max-width: 260px;
-  display: flex;
-  flex-wrap: wrap;
+  -webkit-animation: fadeIn 1.3s ease-out forwards;
+  animation: fadeIn 1.3s ease-out forwards
 }
 
 .hexes-container {
@@ -40,6 +11,7 @@ body .particles-js-canvas-el {
   background: #363636;
   padding: 2rem;
   margin: -2.5rem;
+  overflow: unset !important;
   width: auto !important;
 }
 
@@ -53,35 +25,142 @@ body .particles-js-canvas-el {
   height: 0;
   border-top: solid transparent 0;
   border-right: solid 0 transparent;
-  border-bottom: solid #363636 2rem;
+  border-bottom: solid #363636 3rem;
   border-left: solid 34vw #f0db4f;
+}
+
+.hexes-container::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  background: #363636;
+  width: 100%;
+  height: 0;
+  border-top: solid transparent 0;
+  border-right: solid 0 transparent;
+  border-bottom: solid #f0db4f 3rem;
+  border-left: solid 34vw #363636;
 }
 
 
 .feeder-{
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
-border-radius: 4px;
-width: 100%;
-max-width: 340px;
-height: 30rem;
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 340px;
+  height: 30rem;
+  -webkit-animation: fadeIn 2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  animation: fadeIn 2s cubic-bezier(0.95, 0.05, 0.795, 0.035)
 }
 
 .stargazers{
-  margin-bottom: 3rem;
+  margin-bottom: 4rem !important;
   margin-top: 1.5rem;
-  transform: rotate(-5deg);
+  transform: rotate(-8deg);
   color: #f0db4f
 }
 @media all and (max-width: 1087px){
   body .particles-js-canvas-el{
     display: none !important
   }
-  .hexes-container::before{
+  .hexes-container::before,.hexes-container::after{
     border-left-width: 100vw;
   }
   .stargazers{
-    transform: rotate(-4deg)
+    transform: rotate(-6deg)
   }
+}
+
+.hexes-grid{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 100px
+}
+
+.grid-item>.pic{
+	-webkit-box-shadow: inset 0px 0px 30px 0px;
+	-moz-box-shadow: inset 0px 0px 30px 0px;
+	box-shadow: inset 0px 0px 30px 0px;
+	color: rgba(0,0,0,0.9);
+	background-size: 100%;
+	background-position: center;
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	bottom: -8px;
+	right: -8px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.pic:hover{
+	background-size: 115%;
+	color: transparent;
+	transition: all 0.3s ease-out
+}
+
+.grid-item{
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 0;
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	transform: rotate(45deg);
+	margin: 8px
+}
+
+.hexes-grid .row:not(:first-child){
+	margin-top: -32px
+}
+
+
+.grid-item{
+	transition: all 0.4s linear
+}
+
+.grid.to-low>*{
+	margin: 0 !important;
+}
+
+a{
+  color: rgba(240, 219, 79, 0.4) !important
+}
+
+._card, .content{
+  border: solid 2px #f0db4f;
+  color: #f0db4f;
+  border-radius: 4px;
+  padding: 1rem
+}
+
+.content>.subtitle{
+  color: #f0db4f !important;
+}
+
+.column{
+  overflow: hidden
+}
+
+.fb-sign{
+	z-index: 2;
+	background: #f0db4f !important;
+	color: #363636 !important;
+  border: solid #f0db4f 2px !important;
+  transition: all 0.2s linear
+}
+
+.fb-sign:hover{
+  background: rgba(0,0,0,0) !important;
+  color: #f0db4f !important;
+  transition: all 0.2s linear
 }
