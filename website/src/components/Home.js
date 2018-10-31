@@ -81,7 +81,7 @@ class App extends Component {
               style={hasCustomEl ? { ...tempStyle } : null}>
               {row.map((e, i) => (
                 <a
-                  className="grid-item"
+                  className="grid-item animated fadeIn slower"
                   key={`Stargazer-${rowIndex}-${i}`}
                   href={e.html_url}
                   target="_blank"
@@ -104,7 +104,9 @@ class App extends Component {
     '<iframe class="feeder- is-hidden-touch" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnodeschoolsm%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>'
   render() {
     return (
-      <div className="columns is-mobile is-multiline">
+      <div
+        className="columns is-mobile is-multiline is-gapless"
+        style={{ position: "relative" }}>
         <div
           className="column is-12-touch is-4-desktop"
           style={{
@@ -146,11 +148,12 @@ class App extends Component {
               dangerouslySetInnerHTML={{
                 __html: this.iframe
               }}
-              className="column is-12 has-text-centered is-hidden-mobile"
+              className="column is-12 has-text-centered is-hidden-touch"
               style={{
                 marginTop: "-7rem",
                 marginBottom: "7rem",
-                minHeight: "30rem"
+                minHeight: "30rem",
+                zIndex: 3
               }}
             />
 
@@ -166,6 +169,97 @@ class App extends Component {
                     return j[e]
                   })}
               </div>
+              <div className="bar" />
+            </div>
+          </div>
+
+          <div className="column is-12 socialite">
+            <svg
+              style={{ width: "100%", height: "30rem" }}
+              className="is-hidden-touch"
+              viewBox="0 0 100 100">
+              <circle
+                cx="75"
+                cy="80"
+                r="3"
+                fill="none"
+                stroke="rgba(0,0,0,0.1)"
+              />
+
+              <circle
+                cx="20"
+                cy="2"
+                r="4"
+                fill="none"
+                stroke="rgba(0,0,0,0.2)"
+              />
+              <path
+                d="M 10,80 S 0,85 20,90"
+                stroke-linecap="round"
+                stroke="rgba(0,0,0,0.2)"
+                fill="none"
+              />
+
+              <path
+                d="M 95,2 S 92,50 80,40 75,37 65,65"
+                stroke-linecap="round"
+                stroke="rgba(0,0,0,0.1)"
+                fill="none"
+              />
+              <path
+                d="M -2,20 10,30"
+                stroke="rgba(0,0,0,0.1)"
+                stroke-linecap="round"
+                fill="none"
+              />
+
+              <polygon
+                points="60,0 50,15 70,15"
+                stroke="rgba(0,0,0,0.1)"
+                stroke-linecap="round"
+                fill="none"
+              />
+
+              <polygon
+                points="32,46 30,55 50,55"
+                stroke="rgba(0,0,0,0.2)"
+                stroke-linecap="round"
+                fill="none"
+              />
+
+              <path
+                d="M 50,102 50,85"
+                stroke="rgba(0,0,0,0.1)"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+
+            <h2 className="subtitle has-text-centered has-text-dark has-text-weight-bold">
+              REDES SOCIALES
+            </h2>
+            <div className="is-flex">
+              <a
+                className="button is-rounded"
+                rel="noopener noreferrer"
+                target="_blank">
+                <i className="icon ion-logo-facebook" title="Facebook" />
+              </a>
+              <a
+                className="button is-rounded"
+                title="Instagram"
+                rel="noopener noreferrer"
+                target="_blank">
+                <i className="icon ion-logo-instagram" />
+              </a>
+
+              <a
+                className="button is-rounded"
+                title="GitHub"
+                rel="noopener noreferrer"
+                target="_blank">
+                <i className="icon ion-logo-github" />
+              </a>
             </div>
           </div>
         </div>
@@ -181,8 +275,9 @@ class App extends Component {
               marginTop: "25.6rem",
               color: "#f0db4f",
               fontSize: "10rem",
-              marginLeft: "calc(-33.333vw + 1.1rem)",
-              width: "calc(100vw - 2rem)"
+              marginLeft: "calc(-33.333vw + 1.75rem)",
+              width: "calc(100vw - 2rem)",
+              zIndex: 2
             }}>
             SAN MIGUEL
           </div>
@@ -219,7 +314,7 @@ class App extends Component {
                 <div className="content">
                   <div className="has-text-centered">
                     <i
-                      className="icon ion-md-trophy"
+                      className="icon ion-md-medal"
                       style={{ fontSize: "9rem", padding: "3.5rem 1rem" }}
                     />
                   </div>
@@ -278,7 +373,9 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="column is-12 has-text-centered" style={{ zIndex: 2 }}>
+          <div
+            className="column is-12 has-text-centered"
+            style={{ zIndex: 2, paddingTop: "4rem" }}>
             <a
               className="button is-large fb-sign is-warning"
               href="https://www.facebook.com/groups/nodeschoolsm/"
@@ -287,6 +384,97 @@ class App extends Component {
               <i className="icon ion-logo-facebook" />
               <span>Unirse por Facebook</span>
             </a>
+          </div>
+
+          <div className="bottom-grid">
+            <div
+              className="subtitle has-text-centered has-text-weight-bold has-text-dark is-size-5"
+              style={{ paddingTop: "2rem" }}>
+              HORARIO PARA CADA SÁBADO
+            </div>
+
+            <table className="table" style={{ width: "calc(100% - 4rem)" }}>
+              <thead>
+                <tr>
+                  <th>
+                    <i className="icon ion-ios-time" />
+                    Hora
+                  </th>
+                  <th>
+                    <i className="icon ion-ios-create" />
+                    Actividad
+                  </th>
+                  <th className="is-hidden-mobile">
+                    <i className="icon ion-ios-bug" />
+                    ¿Qué se hace?
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>09:00 - 09:10 AM</td>
+                  <td>WarmUp</td>
+                  <td className="is-hidden-mobile">
+                    Se hace un estiramiento para <b>desestresarse</b> un poco
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>09:10 - 10:20 AM</td>
+                  <td>Charla Teórica</td>
+                  <td className="is-hidden-mobile">
+                    Se brinda la charla o taller por el miembro establecido
+                    dicho sábado
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10:20 - 10:30 AM</td>
+                  <td>Problema para practica</td>
+                  <td className="is-hidden-mobile">
+                    En caso existiera una practica de la charla se da un
+                    problema para ser solucionado por los integrantes de
+                    NodeSchool
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10:30 - 10:50 AM</td>
+                  <td>Receso</td>
+                  <td className="is-hidden-mobile">
+                    Tiempo de <b>receso</b>, además puedes hablar de la{" "}
+                    <b>resolución</b> del problema
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10:50 - 11:30 AM</td>
+                  <td>Practica</td>
+                  <td className="is-hidden-mobile">
+                    Se reunen y forman <b>equipos</b> para <b>solucionar</b> el
+                    problema antes dado
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>11:30 - 11:55 AM</td>
+                  <td>Expocisión de resolución</td>
+                  <td className="is-hidden-mobile">
+                    Se elige uno o varios <b>miembros</b> del equipo para{" "}
+                    <b>exponer</b> la solucion encontrada
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>11:55 - 12:00 PM</td>
+                  <td>PicTime</td>
+                  <td className="is-hidden-mobile">
+                    Antes de terminar el <b>MeetUp</b> se toma una fotografia
+                    para llevarla como vitacora
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
