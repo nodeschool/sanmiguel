@@ -3,13 +3,18 @@ import logo from "../assets/img/logo.svg"
 import config from "../assets/js/particlesjs-config"
 class App extends Component {
   state = {
-    stargazers: false
+    stargazers: false,
+    stargazersRows: []
   }
   async componentDidMount() {
     window.onload = _ =>
       setTimeout(_ => window.particlesJS("particles", config), 300)
 
-    window.onresize = _ => window.particlesJS("particles", config)
+    window.onresize = _ => {
+      window.particlesJS("particles", config)
+      this.stargazersMapper()
+    }
+
     let stargazers = await fetch(
       "https://api.github.com/repos/nodeschool/sanmiguel/stargazers"
     )
@@ -18,24 +23,81 @@ class App extends Component {
       {
         stargazers: json
       },
-      _ => console.log(this.state.stargazers)
+      _ => this.stargazersMapper()
     )
   }
-  getChunks = _ => {
-    const arr = Object.assign([], this.state.stargazers)
-    const r = []
-    let len = arr.length
-    for (let i = 0; i < len; i += 3) {
-      r.push(Object.assign([], arr).splice(i, 3))
+
+  stargazersMapper = _ => {
+    let elementsCount = this.state.stargazers.length
+    let domArr = []
+    let tempArr = Object.assign([], this.state.stargazers)
+    let grid = this.grid || false
+    if (grid && elementsCount > 0) {
+      grid.clientWidth < 120
+        ? grid.classList.add("to-low")
+        : grid.classList.remove("to-low")
+      let i = 0
+      let itemsPerRow =
+        grid.clientWidth >= 120 ? Math.floor(grid.clientWidth / 58) : 1
+
+      Object.keys(tempArr).forEach(e => (tempArr[e].custom = false))
+      let switcher = 1
+      //normal switcher to change lenght off elements to splice
+      while (i < elementsCount) {
+        let len = elementsCount
+        if (elementsCount > itemsPerRow) {
+          len = switcher > 0 ? itemsPerRow : itemsPerRow - 1
+          switcher *= -1
+        }
+        domArr.push(Object.assign([], tempArr).splice(i, len))
+        i += len
+      }
+      let firstRemainder =
+        domArr.length > 1 ? domArr[domArr.length - 2].length % 2 : null
+      let lastRemainder = domArr[domArr.length - 1].length % 2
+
+      let lastTwoAreEven = firstRemainder === lastRemainder
+      let lastTwoAreOdd =
+        firstRemainder !== 0 && lastRemainder !== 0 && firstRemainder !== null
+      let lastOneSizes1 =
+        firstRemainder !== 0 &&
+        domArr[domArr.length - 1].length === 1 &&
+        firstRemainder != null
+      domArr[domArr.length - 1][0].custom =
+        lastTwoAreEven || lastTwoAreOdd || lastOneSizes1
+
+      this.setState({
+        stargazersRows: domArr.map((row, rowIndex) => {
+          let hasCustomEl = domArr[rowIndex][0].custom
+          let tempStyle = {}
+          tempStyle[
+            `padding${["Right", "Left"][Math.round(Math.random() * 1)]}`
+          ] = "58px"
+
+          return (
+            <div
+              className="row"
+              key={rowIndex}
+              style={hasCustomEl ? { ...tempStyle } : null}>
+              {row.map((e, i) => (
+                <a
+                  className="grid-item"
+                  key={`Stargazer-${rowIndex}-${i}`}
+                  href={e.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div
+                    className="pic"
+                    style={{ backgroundImage: `url(${e.avatar_url})` }}
+                    title={e.login}
+                  />
+                </a>
+              ))}
+            </div>
+          )
+        })
+      })
     }
-    return r.map((e, i) => (
-      <div className="hex-row" key={"hexrow" + i}>
-        {e.map(stargazer => {
-          len--
-          return <Hex stargazer={stargazer} index={len} key={len} even={e.length===1}/>
-        })}
-      </div>
-    ))
   }
 
   iframe =
@@ -46,11 +108,11 @@ class App extends Component {
         <div
           className="column is-12-touch is-4-desktop"
           style={{
-            overflow: "auto",
-            overflowX: "hidden",
             background: "#f0db4f"
           }}>
-          <div className="column is-12 has-text-centered">
+          <div
+            className="column is-12 has-text-centered"
+            style={{ minHeight: "22.5rem" }}>
             <img
               src={logo}
               style={{
@@ -58,16 +120,19 @@ class App extends Component {
                 marginTop: "4rem",
                 minWidth: "14.5rem"
               }}
-              alt="logo"
+              className="animated fadeInDown"
+              alt="."
             />
           </div>
           <div className="section" style={{ paddingBottom: "1.75rem" }}>
             <div
-              className="container title is-size-1-touch has-text-centered-touch has-text-dark"
+              className="container title is-size-1-touch has-text-centered-touch has-text-dark animated fadeInUp fast"
               style={{ fontSize: "10rem", width: "calc(100vw - 2rem)" }}>
               SAN MIGUEL
             </div>
-            <p className="has-text-grey-dark">
+            <p
+              className="has-text-grey-dark animated fadeIn slow"
+              style={{ paddingBottom: "10rem" }}>
               Somos una comunidad que se ha formado gracias a las ganas de
               querer aprender sobre las herramientas tecnológicas para el
               desarrollo Web y multiplataforma en general. Actualmente nos
@@ -76,23 +141,30 @@ class App extends Component {
               ), los días sábados de <strong>09:00AM</strong> a{" "}
               <strong>12:00MD</strong>
             </p>
-            {this.iframe ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.iframe
-                }}
-                className="column is-12 has-text-centered"
-                style={{ paddingTop: "3rem", marginBottom: "7rem" }}
-              />
-            ) : null}
+
+            <div
+              dangerouslySetInnerHTML={{
+                __html: this.iframe
+              }}
+              className="column is-12 has-text-centered is-hidden-mobile"
+              style={{
+                marginTop: "-7rem",
+                marginBottom: "7rem",
+                minHeight: "30rem"
+              }}
+            />
 
             <div className="column has-text-centered is-12 hexes-container">
               <h1 className="title has-text-centered is-size-2 stargazers">
                 <i className="icon ion-md-star is-size-2" /> STARGAZERS{" "}
                 <i className="icon ion-md-star is-size-2" />
               </h1>
-              <div className="hexes">
-                {this.state.stargazers ? this.getChunks() : null}
+              <div className="hexes-grid" ref={el => (this.grid = el)}>
+                {this.state.stargazers &&
+                  Object.keys(this.state.stargazersRows).map(e => {
+                    let j = this.state.stargazersRows
+                    return j[e]
+                  })}
               </div>
             </div>
           </div>
@@ -100,13 +172,11 @@ class App extends Component {
         <div
           className="column is-8-desktop is-12-touch has-background-dark"
           style={{
-            overflow: "auto",
-            overflowX: "hidden",
             position: "relative"
           }}
           id="particles">
           <div
-            className="title is-hidden-touch container"
+            className="title is-hidden-touch container animated fadeInUp fast"
             style={{
               marginTop: "25.6rem",
               color: "#f0db4f",
@@ -116,55 +186,112 @@ class App extends Component {
             }}>
             SAN MIGUEL
           </div>
+          <div
+            className="columns is-multiline animated fadeIn slow"
+            style={{
+              padding: "0 2rem",
+              paddingTop: "5rem",
+              position: "relative",
+              zIndex: 2
+            }}>
+            <div className="column is-6 animated fadeIn slower">
+              <div className="_card">
+                <div className="content">
+                  <div className="has-text-centered">
+                    <i
+                      className="icon ion-md-contacts"
+                      style={{ fontSize: "10rem", padding: "3.5rem 1rem" }}
+                    />
+                  </div>
+                  <h1 className="subtitle has-text-centered">
+                    COMPARTÍ LO QUE SABES
+                  </h1>
+                  <p>
+                    En <b>NodeSchool</b> puedes ya sea brindar una charla o un
+                    taller relacionado a cualquier tema de desarrollo, no
+                    precisamente <b>Javascript</b> o algo de <b>FrontEnd</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="column is-6 animated fadeIn slower">
+              <div className="_card">
+                <div className="content">
+                  <div className="has-text-centered">
+                    <i
+                      className="icon ion-md-trophy"
+                      style={{ fontSize: "9rem", padding: "3.5rem 1rem" }}
+                    />
+                  </div>
+                  <h1 className="subtitle has-text-centered">VUÉLVETE MEJOR</h1>
+                  <p>
+                    Cuando das tu opinión en algo que eres muy bueno, puedes
+                    tomar de buena manera <b>escuchar</b> versiones de los demás{" "}
+                    <b>miembros</b> así como dar tu punto de vista y asimismo{" "}
+                    <b>discutirlas</b> entre todos
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="column is-6 animated fadeIn slower">
+              <div className="_card">
+                <div className="content">
+                  <div className="has-text-centered">
+                    <i
+                      className="icon ion-ios-cash"
+                      style={{ fontSize: "9rem", padding: "3.5rem 1rem" }}
+                    />
+                  </div>
+                  <h1 className="subtitle has-text-centered">
+                    NO GASTES PISTO
+                  </h1>
+                  <p>
+                    Si te gustas aprender y quieres ir a{" "}
+                    <b>Udemy, Edx, Lynda, etc.</b>, y además no cuentas con los
+                    recursos para cancelar las certificaciones{" "}
+                    <i>(que es lo que buscamos)</i> , acércate y practiquemos
+                    entre todos, coméntanos y hagamos Bugs!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="column is-6 animated fadeIn slower">
+              <div className="_card">
+                <div className="content">
+                  <div className="has-text-centered">
+                    <i
+                      className="icon ion-md-cube"
+                      style={{ fontSize: "8rem", padding: "4rem 1rem" }}
+                    />
+                  </div>
+                  <h1 className="subtitle has-text-centered">HACE DEPLOY</h1>
+                  <p>
+                    Júntate y agrégate a los <b>miembros activos</b>, así
+                    estarás al pendiente de las actividades que se realizan cada
+                    sábado, además puedes consultar por las <b>camisetas</b>{" "}
+                    disponibles. PD: FOSS {`<3`}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="column is-12 has-text-centered" style={{ zIndex: 2 }}>
+            <a
+              className="button is-large fb-sign is-warning"
+              href="https://www.facebook.com/groups/nodeschoolsm/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i className="icon ion-logo-facebook" />
+              <span>Unirse por Facebook</span>
+            </a>
+          </div>
         </div>
       </div>
     )
   }
-}
-
-const Hex = ({ index, stargazer, even }) => {
-  console.log(index)
-  return (
-    <a
-      key={"prof" + index}
-      className="hex animated fadeIn fast"
-      href={stargazer.html_url}
-      target="_blank"
-      title={stargazer.login}
-      style={even ? { marginTop: "-8px", marginLeft: "76px" } : {}}>
-      <svg
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        width="104"
-        height="91"
-        viewBox="0 0 104 90.06664199358161">
-        <defs>
-          <pattern
-            id={`stargazerPic${index}`}
-            width="1"
-            height="1"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="xMidYMid slice"
-            dangerouslySetInnerHTML={{
-              __html: ` <image xlink:href='${
-                stargazer.avatar_url
-              }' width="100" height="100"></image>`
-            }}
-          />
-        </defs>
-        <path
-          stroke="#000"
-          strokeWidth="2px"
-          fill={`url(#stargazerPic${index})`}
-          d="M0 45.033320996790806L26 0L78 0L104 45.033320996790806L78 90.06664199358161L26 90.06664199358161Z"
-        />
-      </svg>
-    </a>
-  )
-}
-
-Hex.defaultProps = {
-  even: false
 }
 
 export default App
