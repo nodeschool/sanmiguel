@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import logo from "../assets/img/logo.svg"
 import config from "../assets/js/particlesjs-config"
 class App extends Component {
@@ -110,7 +111,8 @@ class App extends Component {
         <div
           className="column is-12-touch is-4-desktop"
           style={{
-            background: "#f0db4f"
+            background: "#f0db4f",
+            zIndex: 2
           }}>
           <div
             className="column is-12 has-text-centered"
@@ -195,42 +197,42 @@ class App extends Component {
               />
               <path
                 d="M 10,80 S 0,85 20,90"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke="rgba(0,0,0,0.2)"
                 fill="none"
               />
 
               <path
                 d="M 95,2 S 92,50 80,40 75,37 65,65"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 stroke="rgba(0,0,0,0.1)"
                 fill="none"
               />
               <path
                 d="M -2,20 10,30"
                 stroke="rgba(0,0,0,0.1)"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 fill="none"
               />
 
               <polygon
                 points="60,0 50,15 70,15"
                 stroke="rgba(0,0,0,0.1)"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 fill="none"
               />
 
               <polygon
                 points="32,46 30,55 50,55"
                 stroke="rgba(0,0,0,0.2)"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 fill="none"
               />
 
               <path
                 d="M 50,102 50,85"
                 stroke="rgba(0,0,0,0.1)"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 fill="none"
               />
             </svg>
@@ -475,6 +477,27 @@ class App extends Component {
                 </tr>
               </tbody>
             </table>
+
+            <div
+              className="field is-grouped is-grouped-right"
+              style={{ padding: "3rem 2rem 0 2rem" }}>
+              <div className="control">
+                <a
+                  href="https://github.com/nodeschool/sanmiguel/blob/master/CODE_OF_CONDUCT.md"
+                  rel="noopener noreferrer"
+                  className="button fb-sign is-warning"
+                  target="_blank">
+                  <i className="icon ion-ios-hand is-size-5" />
+                  <span>Codigo de conducta</span>
+                </a>
+              </div>
+              <div className="control">
+                <Link className="button fb-sign is-warning" to="/rankboard">
+                  <i className="icon ion-ios-podium is-size-5" />
+                  <span>Tablero de pocisiones</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

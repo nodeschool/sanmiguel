@@ -95,6 +95,14 @@ body .particles-js-canvas-el {
   body .bottom-grid{
     border: 0
   }
+
+  body .bar{
+    background: #363636
+  }
+
+  body .RankBoard{
+    margin: 0 -8rem
+  }
 }
 /*///////////////////MEDIA QUERIES//////////////////*/
 
@@ -107,6 +115,21 @@ body .particles-js-canvas-el {
 	justify-content: center;
 	flex-wrap: wrap;
 	min-width: 100px
+}
+
+.grid-item{
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	padding: 0;
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	transform: rotate(45deg);
+  margin: 8px;
+  border: solid 1px #f0db4f;
+  -webkit-transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 }
 
 .grid-item>.pic{
@@ -122,36 +145,29 @@ body .particles-js-canvas-el {
 	bottom: -8px;
 	right: -8px;
 	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-.pic:hover{
-	background-size: 115%;
-  color: rgba(0,0,0,0);
-  -webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out
-}
-
-.grid-item{
-	position: relative;
-	overflow: hidden;
-	cursor: pointer;
-	padding: 0;
-	display: inline-block;
-	width: 42px;
-	height: 42px;
-	transform: rotate(45deg);
-  margin: 8px;
-  border: solid 1px #f0db4f
+  transform: rotate(-45deg);  
+  -webkit-transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 }
 
 .hexes-grid .row:not(:first-child){
 	margin-top: -35px
 }
 
-.grid-item{
-  -webkit-transition: all 0.4s linear;
-	transition: all 0.4s linear
+.grid-item:hover .pic{
+  background-size: 110%;
+  color: rgba(0,0,0,0);
+  transform: rotate(-90deg);
+  z-index: 10;
+  -webkit-transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+	transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95)t;
+}
+
+.grid-item:hover{
+  transform: rotate(90deg) scale(1.45);
+  z-index: 10;
+  border-width: 2px;
+  outline: solid black 2px
 }
 
 .grid.to-low>*{
@@ -180,7 +196,8 @@ a{
 .fb-sign{
 	z-index: 2;
 	background: #f0db4f !important;
-	color: #363636 !important;
+  color: #363636 !important;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.1);
   border: solid #f0db4f 2px !important;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear
@@ -269,7 +286,7 @@ table{
   width: 3rem;
   height: 3rem;
   font-size: 2rem;
-  border-width: 3px !important;
+  border-width: 2px !important;
   margin: 0.4rem;
   background: rgba(0,0,0,0);
   border-radius: 2rem !important;
