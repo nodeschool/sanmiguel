@@ -1,4 +1,4 @@
-#Metodologías para escribir CSS
+# Metodologías para escribir CSS
 
 Normalmente cuando se escribe CSS se utiliza algún framework para facilitar el trabajo y terminar en una menor cantidad de tiempo, lo cual se vuelve una constumbre y se deja un poco de lado escribir desde cero tus propias reglas CSS.
 
