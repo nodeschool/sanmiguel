@@ -265,8 +265,8 @@ table{
 
 ._card:hover{
   cursor: pointer;
-  -webkit-animation: tada 1s forwards;
-  animation: tada 1s forwards
+  -webkit-animation: pulse 0.3s forwards;
+  animation: pulse 0.3s forwards
 }
 
 .socialite{

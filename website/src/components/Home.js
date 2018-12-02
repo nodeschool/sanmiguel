@@ -242,12 +242,14 @@ class App extends Component {
             </h2>
             <div className="is-flex">
               <a
+                href="https://web.facebook.com/nodeschoolsm/"
                 className="button is-rounded"
                 rel="noopener noreferrer"
                 target="_blank">
                 <i className="icon ion-logo-facebook" title="Facebook" />
               </a>
               <a
+                href="https://www.instagram.com/nodeschoolsm/"
                 className="button is-rounded"
                 title="Instagram"
                 rel="noopener noreferrer"
@@ -256,6 +258,7 @@ class App extends Component {
               </a>
 
               <a
+                href="https://github.com/nodeschool/sanmiguel"
                 className="button is-rounded"
                 title="GitHub"
                 rel="noopener noreferrer"
@@ -479,24 +482,21 @@ class App extends Component {
             </table>
 
             <div
-              className="field is-grouped is-grouped-right"
+              className="buttons is-right"
               style={{ padding: "3rem 2rem 0 2rem" }}>
-              <div className="control">
-                <a
-                  href="https://github.com/nodeschool/sanmiguel/blob/master/CODE_OF_CONDUCT.md"
-                  rel="noopener noreferrer"
-                  className="button fb-sign is-warning"
-                  target="_blank">
-                  <i className="icon ion-ios-hand is-size-5" />
-                  <span>Codigo de conducta</span>
-                </a>
-              </div>
-              <div className="control">
-                <Link className="button fb-sign is-warning" to="/rankboard">
-                  <i className="icon ion-ios-podium is-size-5" />
-                  <span>Tablero de pocisiones</span>
-                </Link>
-              </div>
+              <a
+                href="https://github.com/nodeschool/sanmiguel/blob/master/CODE_OF_CONDUCT.md"
+                rel="noopener noreferrer"
+                className="button fb-sign is-warning"
+                target="_blank">
+                <i className="icon ion-ios-hand is-size-5" />
+                <span>Codigo de conducta</span>
+              </a>
+
+              <Link className="button fb-sign is-warning" to="/rankboard">
+                <i className="icon ion-ios-podium is-size-5" />
+                <span>Tablero de pocisiones</span>
+              </Link>
             </div>
           </div>
         </div>
