@@ -493,7 +493,9 @@ class App extends Component {
                 <span>Codigo de conducta</span>
               </a>
 
-              <Link className="button fb-sign is-warning" to="/rankboard">
+              <Link
+                className="button fb-sign is-warning"
+                to={{ hash: "rankboard" }}>
                 <i className="icon ion-ios-podium is-size-5" />
                 <span>Tablero de pocisiones</span>
               </Link>
