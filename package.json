@@ -1,6 +1,6 @@
 {
   "name": "nodeschoolsm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "scripts": {
     "start":"cd website && yarn start",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "moment": "^2.22.2",
-    "yargs": "^12.0.2"
+    "yargs": "^12.0.5"
   },
   "license": "MIT"
 }
