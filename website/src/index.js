@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
 import NotFound from "./components/NotFound"
 import RankBoard from "./components/RankBoard"
 import Home from "./components/Home"
@@ -9,9 +9,9 @@ import "./assets/css/index.css"
 
 const Routing = _ => {
   return (
-    <Router>
+    <Router basename="/" hashType="noslash">
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/rankboard" component={RankBoard} />
         <Route component={NotFound} />
       </Switch>
