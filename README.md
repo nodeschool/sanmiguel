@@ -1,7 +1,7 @@
 # ¿Te interesa unirte a NodeSchool San Miguel?
 Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " __Quiero unirme!__ " y pronto nos pondremos en contacto contigo
 
-![](./logo.svg)
+<img src="./logo.svg" width="420">
 
 # ¿Cuánto cuesta?
 Bueno es completamente gratis, ¿Qué estás esperando para ser parte de nosotros?

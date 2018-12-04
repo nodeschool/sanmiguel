@@ -45,7 +45,7 @@ class RankBoard extends Component {
         `}</style>
         <div className="hero is-warning">
           <div className="hero-body">
-            <div className="title is-size-1">Tablero de pocisiones</div>
+            <div className="title is-size-1 has-text-dark">Tablero de pocisiones</div>
             <div className="subtitle">
               Es malo pocisionar a una persona o marcarla por un reto hecho en
               el <b>workshop</b>, pero de una manera u otra se debe valorar su

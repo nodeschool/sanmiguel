@@ -131,7 +131,11 @@ class App extends Component {
           <div className="section" style={{ paddingBottom: "1.75rem" }}>
             <div
               className="container title is-size-1-touch has-text-centered-touch has-text-dark animated fadeInUp fast"
-              style={{ fontSize: "10rem", width: "calc(100vw - 2rem)" }}>
+              style={{
+                fontSize: "10rem",
+                width: "calc(100vw - 2rem)",
+                cursor: "default"
+              }}>
               SAN MIGUEL
             </div>
             <p
@@ -282,6 +286,7 @@ class App extends Component {
               fontSize: "10rem",
               marginLeft: "calc(-33.333vw + 1.75rem)",
               width: "calc(100vw - 2rem)",
+              cursor: "default",
               zIndex: 2
             }}>
             SAN MIGUEL
