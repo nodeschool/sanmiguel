@@ -20,12 +20,24 @@ class Reconocimientos extends Component {
       this.setState({ curState: "NotFound" })
     } else {
       text = yaml.load(text)
-      const topic = await text.tema.filter(
+
+      const topic = await Object.keys(text.tema).filter(
         e => e.replace(/ /gi, "_").trim() === params.topic
       )
-      console.log(topic)
+      
       if (topic.length > 0) {
-        this.setState({ profile: { ...text, tema: topic }, curState: "Found" })
+        let date = text.tema[topic[0].split("_").join(" ")].fecha
+        this.setState({
+          profile: {
+            fecha: date,
+            tema: topic[0],
+            nombre: params.man
+              .split("_")
+              .map(e => e[0].toUpperCase() + e.substr(1))
+              .join(" ")
+          },
+          curState: "Found"
+        })
       } else {
         this.setState({ curState: "NotFound" })
       }
@@ -55,7 +67,7 @@ const Found = ({ data }) => (
     <h1 className="title is-size-1 has-text-centered">{data.nombre}</h1>
     <h1 className="title is-size-2 has-text-centered">{data.tema}</h1>
     <h1 className="title is-size-3 has-text-centered">
-      {moment(data.date, "MM-DD-YYYY").format("dddd D [de] MMMM [del] YYYY")}
+      {moment(data.fecha, "MM-DD-YYYY").format("dddd D [de] MMMM [del] YYYY")}
     </h1>
   </div>
 )
