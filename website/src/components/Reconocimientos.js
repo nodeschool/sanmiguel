@@ -11,9 +11,9 @@ class Reconocimientos extends Component {
   async componentDidMount() {
     const params = this.props.match.params
     let data = await fetch(
-      `https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/${
-        params.man
-      }.yml`
+      `https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/${params.man
+        .split("_")
+        .join("%20")}.yml`
     )
     let text = await data.text()
     if (text.match("404: Not Found")) {
@@ -21,7 +21,7 @@ class Reconocimientos extends Component {
     } else {
       text = yaml.load(text)
       const topic = await text.tema.filter(
-        e => e.toLowerCase() === params.topic.toLowerCase()
+        e => e.replace(/ /gi, "_").trim() === params.topic
       )
       console.log(topic)
       if (topic.length > 0) {

@@ -1,4 +1,5 @@
-nombre: "Denny Portillo"
+nombre: Denny Portillo
 tema: 
-  - "Introducción a React JS"
-date: "03-06-2018"
+  introduccion a reactjs:
+    titulo: Introducción a React JS
+    fecha: 03-06-2018
