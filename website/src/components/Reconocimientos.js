@@ -32,14 +32,12 @@ class Reconocimientos extends Component {
         let fecha = stuff.fecha
         let tema = stuff.titulo
         let tipo = stuff.tipo
+        let nombre = text.nombre
         this.setState({
           profile: {
             fecha,
             tema,
-            nombre: params.man
-              .split("_")
-              .map(e => e[0].toUpperCase() + e.substr(1))
-              .join(" "),
+            nombre,
             tipo
           },
           curState: "Found"
