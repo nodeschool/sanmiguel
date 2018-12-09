@@ -104,24 +104,30 @@ const Found = ({ temas, man, manName }) => (
           <tr key={e}>
             <td>{e}</td>
             <td className="has-text-right">
-              <Link
+              <a
                 className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
-                to={`/reconocimientos/${man}/${e
+                href={`https://nodeschool.io/sanmiguel/#reconocimientos/${man}/${e
                   .replace(/ /gi, "_")
                   .trim()
                   .toLowerCase()}`}
-                replace>
-                Ver{" "}
-                <i
-                  className="icon ion-md-open"
-                  style={{ marginLeft: "0.3rem" }}
-                />
-              </Link>
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>Ver</span>
+                <i className="icon ion-md-open" />
+              </a>
             </td>
           </tr>
         ))}
       </tbody>
     </table>
+    <div className="buttons">
+      <Link
+        className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
+        to="/reconocimientos">
+        <i className="icon ion-ios-arrow-back is-size-5" />
+        <span>Volver</span>
+      </Link>
+    </div>
   </div>
 )
 
