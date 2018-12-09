@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 
-class RankBoard extends Component {
+class LeaderBoard extends Component {
   constructor(props) {
     super(props)
     this.state = { challenges: false, dudes: {}, rankCount: false }
@@ -29,7 +29,7 @@ class RankBoard extends Component {
 
   render() {
     return (
-      <div className="RankBoard" style={{ minHeight: "100vh" }}>
+      <div className="LeaderBoard" style={{ minHeight: "100vh" }}>
         <style>{`
           body{
             padding: 2rem calc(10vw + 7rem); 
@@ -45,7 +45,7 @@ class RankBoard extends Component {
         `}</style>
         <div className="hero is-warning">
           <div className="hero-body">
-            <div className="title is-size-1 has-text-dark">Tablero de pocisiones</div>
+            <div className="title is-size-1 has-text-dark">Tablero de puntajes</div>
             <div className="subtitle">
               Es malo pocisionar a una persona o marcarla por un reto hecho en
               el <b>workshop</b>, pero de una manera u otra se debe valorar su
@@ -63,7 +63,7 @@ class RankBoard extends Component {
         `}
         </style>
         <div className="section">
-          <div className="title is-size-4">Listado de retos / Retadores</div>
+          <div className="title is-size-4">Retos / Retadores</div>
           {this.state.rankCount ? (
             <Rank
               dudes={this.state.dudes}
@@ -171,4 +171,4 @@ const Rank = props => (
   </table>
 )
 
-export default RankBoard
+export default LeaderBoard
