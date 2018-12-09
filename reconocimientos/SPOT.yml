@@ -1,0 +1,10 @@
+nombre: SPOT
+tema: 
+  inteligencia artificial:
+    titulo: Inteligencia Artificial
+    fecha: 23-10-2018
+    tipo: charla
+  serverless con aws:
+    titulo: Serverless con Amazon Web Services
+    fecha: 23-10-2018
+    tipo: taller
