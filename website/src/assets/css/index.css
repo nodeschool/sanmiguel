@@ -312,3 +312,8 @@ table{
   border-radius: 4px;
   background: rgba(0,0,0,0.2);
 }
+
+body *{
+  -webkit-transition: all 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: all 0.3s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+}
