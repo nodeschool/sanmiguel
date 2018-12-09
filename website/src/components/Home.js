@@ -498,11 +498,20 @@ class App extends Component {
                 <span>Codigo de conducta</span>
               </a>
 
+              <a
+                href="https://nodeschool.io/sanmiguel/#reconocimientos"
+                rel="noopener noreferrer"
+                className="button fb-sign is-warning"
+                target="_blank">
+                <i className="icon ion-ios-paper is-size-5" />
+                <span>Reconocimientos</span>
+              </a>
+
               <Link
                 className="button fb-sign is-warning"
-                to={{ hash: "rankboard" }}>
+                to={{ hash: "leaderboard" }}>
                 <i className="icon ion-ios-podium is-size-5" />
-                <span>Tablero de pocisiones</span>
+                <span>LeaderBoard</span>
               </Link>
             </div>
           </div>

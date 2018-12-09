@@ -5,12 +5,14 @@ import logo from "../assets/img/logo.svg"
 const yaml = require("js-yaml")
 const moment = require("moment")
 moment.locale("es")
+
 class Reconocimientos extends Component {
   state = {
     curState: "Loading",
     profile: {}
   }
-  async componentDidMount() {
+
+  getCert = async _ => {
     const params = this.props.match.params
     let data = await fetch(
       `https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/${params.man
@@ -47,6 +49,17 @@ class Reconocimientos extends Component {
       }
     }
   }
+
+  componentDidMount() {
+    this.getCert()
+  }
+
+  componentDidUpdate(pprops, pstate) {
+    if (this.props.location !== pprops.location) {
+      this.getCert()
+    }
+  }
+
   render() {
     return (
       <State
@@ -57,6 +70,7 @@ class Reconocimientos extends Component {
     )
   }
 }
+
 const State = ({ stage, data, params }) => {
   return {
     Found: <Found data={data} params={params} />,
@@ -64,6 +78,7 @@ const State = ({ stage, data, params }) => {
     Loading: <Loading />
   }[stage]
 }
+
 const Found = ({ data, params }) => (
   <div
     className="column is-12 is-flex"
@@ -114,7 +129,7 @@ const Found = ({ data, params }) => (
       className="subttitle is-size-5 has-text-centered"
       style={{ fontFamily: "'Poppins', sans-serif" }}>
       El día{" "}
-      {moment(data.fecha, "MM-DD-YYYY").format("dddd D [de] MMMM [del] YYYY")}{" "}
+      {moment(data.fecha, "DD-MM-YYYY").format("dddd D [de] MMMM [del] YYYY")}{" "}
       en la ciudad de San Miguel, El Salvador
     </h1>
     <pre
@@ -140,10 +155,11 @@ const NotFound = _ => (
       justifyContent: "center"
     }}>
     <h1 className="title is-size-1 has-text-centered">
-      Lo sentimos no encontramos el reconocimiento
+      Documento no encontrado
     </h1>
   </div>
 )
+
 const Loading = _ => (
   <div
     className="column is-12 is-flex"
