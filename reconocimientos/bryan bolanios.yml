@@ -3,4 +3,9 @@ tema:
   fundamentos de photoshop:
     titulo: Fundamentos de Photoshop
     fecha: 01-12-2018
+    tipo: charla
+  
+  como mejorar tu ux-ui:
+    titulo: Cómo mejorar tu UX/UI
+    fecha: 01-12-2018
     tipo: taller

@@ -1,6 +1,10 @@
 nombre: Cristian Arteaga
 tema: 
   fundamentos basicos de hardware:
-    titulo: Fundamentos básicos del hardware orientado a dispositivos móviles
+    titulo: Fundamentos básicos del Hardware orientado a dispositivos móviles
     fecha: 01-12-2018
+    tipo: charla
+  conociendo hardware de pc:
+    titulo: Conociendo el Hardware de una computadora personal
+    fecha: 08-12-2018
     tipo: charla
