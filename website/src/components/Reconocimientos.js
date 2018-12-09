@@ -99,34 +99,34 @@ const Found = ({ data, params }) => (
     />
 
     <h1
-      className="title is-size-1 has-text-centered"
+      className="title is-size-1 is-size-3-mobile has-text-centered"
       style={{ fontFamily: "'Roboto', sans-serif" }}>
       La Comunidad de <br />
       NodeSchool San Miguel
     </h1>
     <h1
-      className="subtitle is-size-5 has-text-centered"
+      className="subtitle is-size-5 is-size-6-mobile has-text-centered"
       style={{ fontFamily: "'Poppins', sans-serif" }}>
       OTORGA EL PRESENTE RECONOCIMIENTO A
     </h1>
     <h1
-      className="title has-text-centered"
+      className="title has-text-centered is-size-1-mobile"
       style={{ fontFamily: "'Roboto', sans-serif", fontSize: "4rem" }}>
       {data.nombre}
     </h1>
     <h1
-      className="subtitle is-size-5 has-text-centered"
+      className="subtitle is-size-5 is-size-6-mobile has-text-centered"
       style={{ fontFamily: "'Poppins', sans-serif" }}>
       POR HABER IMPARTIDO {data.tipo.toUpperCase() === "CHARLA" ? "LA" : "EL"}{" "}
       {data.tipo.toUpperCase()}
     </h1>
     <h1
-      className="title is-size-2 has-text-centered"
+      className="title is-size-2  is-size-4-mobile has-text-centered"
       style={{ fontFamily: "'Roboto', sans-serif" }}>
       {data.tema}
     </h1>
     <h1
-      className="subttitle is-size-5 has-text-centered"
+      className="subttitle is-size-5 is-size-6-mobile has-text-centered"
       style={{ fontFamily: "'Poppins', sans-serif" }}>
       El día{" "}
       {moment(data.fecha, "DD-MM-YYYY").format("dddd D [de] MMMM [del] YYYY")}{" "}
@@ -137,7 +137,9 @@ const Found = ({ data, params }) => (
       style={{
         marginBottom: "3rem",
         background: "rgba(255,255,255,0.4)",
-        borderRadius: "4px"
+        borderRadius: "4px",
+        overflow: "auto",
+        maxWidth: "90vw"
       }}>
       Verificar en: https://nodeschool.io/sanmiguel/#reconocimientos/
       {params.man}/{params.topic}
@@ -154,7 +156,7 @@ const NotFound = _ => (
       alignItems: "center",
       justifyContent: "center"
     }}>
-    <h1 className="title is-size-1 has-text-centered">
+    <h1 className="title is-size-1 is-size-3-mobile has-text-centered">
       Documento no encontrado
     </h1>
   </div>
@@ -169,7 +171,9 @@ const Loading = _ => (
       alignItems: "center",
       justifyContent: "center"
     }}>
-    <h1 className="title is-size-1 has-text-centered">Buscando...</h1>
+    <h1 className="title is-size-1 is-size-2-mobile  has-text-centered">
+      Buscando...
+    </h1>
   </div>
 )
 export default Reconocimientos

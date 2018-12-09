@@ -83,12 +83,12 @@ const Found = ({ temas, man, manName }) => (
         `}
     </style>
     <h1
-      className="subtitle is-size-1 has-text-centered has-text-dark"
+      className="subtitle is-size-1  is-size-3-mobile has-text-centered has-text-dark"
       style={{ paddingTop: "4rem" }}>
       Lista de Talleres/Charlas
     </h1>
     <h1
-      className="title is-size-1 has-text-centered"
+      className="title is-size-1  is-size-2-mobile has-text-centered"
       style={{ fontFamily: "'Roboto'; san-serif" }}>
       {manName}
     </h1>
@@ -134,7 +134,7 @@ const NotFound = _ => (
       alignItems: "center",
       justifyContent: "center"
     }}>
-    <h1 className="title is-size-1 has-text-centered">
+    <h1 className="title is-size-1 is-size-3-mobile has-text-centered">
       Tallerista/Ponente no econtrado
     </h1>
   </div>
@@ -149,7 +149,9 @@ const Loading = _ => (
       alignItems: "center",
       justifyContent: "center"
     }}>
-    <h1 className="title is-size-1 has-text-centered">Buscando...</h1>
+    <h1 className="title is-size-1 is-size-2-mobile  has-text-centered">
+      Buscando...
+    </h1>
   </div>
 )
 export default Man

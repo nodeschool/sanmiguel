@@ -45,7 +45,7 @@ const Profiles = ({ profiles }) => (
         `}
     </style>
     <h1
-      className="subtitle is-size-1 has-text-centered has-text-dark"
+      className="subtitle is-size-1 is-size-3-mobile has-text-centered has-text-dark"
       style={{ paddingTop: "4rem" }}>
       Lista de Talleristas/Ponentes
     </h1>
@@ -70,7 +70,11 @@ const Profiles = ({ profiles }) => (
                 className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
                 to={"/reconocimientos/" + e.replace(/ /gi, "_").trim()}
                 replace>
-                <i className="icon ion-ios-paper" style={{marginRight: "0.3rem"}}/>Reconocimientos
+                <i
+                  className="icon ion-ios-paper is-hidden-mobile"
+                  style={{ marginRight: "0.3rem" }}
+                />
+                Reconocimientos
               </Link>
             </td>
           </tr>
@@ -89,7 +93,9 @@ const Loading = _ => (
       alignItems: "center",
       justifyContent: "center"
     }}>
-    <h1 className="title is-size-1 has-text-centered">Buscando...</h1>
+    <h1 className="title is-size-1 is-size-2-mobile has-text-centered">
+      Buscando...
+    </h1>
   </div>
 )
 export default List
