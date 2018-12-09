@@ -33,19 +33,24 @@ class LeaderBoard extends Component {
         <style>{`
           body{
             padding: 2rem calc(10vw + 7rem); 
-            background: #ffdd57
+            background: #f0db4f
           } 
-          table.table.has-background-warning tr>td{
+          body table.table{
+            background: #f0db4f
+          }
+          table.table tr>td{
             border-width: 2px !important;
             border-color: #363636 !important
           }
-          table.table.has-background-warning tr>th{
+          table.table tr>th{
             border-width: 2px !important
           }
         `}</style>
-        <div className="hero is-warning">
+        <div className="hero">
           <div className="hero-body">
-            <div className="title is-size-1 has-text-dark">Tablero de puntajes</div>
+            <div className="title is-size-1 has-text-dark">
+              Tablero de puntajes
+            </div>
             <div className="subtitle">
               Es malo pocisionar a una persona o marcarla por un reto hecho en
               el <b>workshop</b>, pero de una manera u otra se debe valorar su
@@ -92,20 +97,17 @@ class LeaderBoard extends Component {
             Al final cáda retador de la lista recibira un certificado por
             participación , pero el top 3 tendrá extra por su esfuerzo
           </div>
-          <div
-            className="field is-grouped is-grouped-right"
-            style={{ marginTop: "3rem" }}>
-            <div className="control">
-              <Link
-                className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
-                to="/">
-                Volver
-              </Link>
-            </div>
-            <div className="control">
-              <div className="button is-dark is-radiusless has-text-warning has-text-weight-bold">
-                Agregar reto
-              </div>
+
+          <div className="buttons is-right" style={{ marginTop: "3rem" }}>
+            <Link
+              className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
+              to="/">
+              <i className="icon ion-ios-arrow-back is-size-5" />
+              <span>Volver</span>
+            </Link>
+            <div className="button is-dark is-radiusless has-text-warning has-text-weight-bold">
+              <i className="icon ion-ios-construct is-size-5" />
+              <span>Agregar reto</span>
             </div>
           </div>
         </div>
@@ -125,7 +127,7 @@ const Loader = _ => (
 )
 
 const Individual = props => (
-  <table className="table is-fullwidth is-bordered is-marginless has-background-warning animated fadeIn">
+  <table className="table is-fullwidth is-bordered is-marginless animated fadeIn">
     <thead>
       <tr>
         <th>Retador</th>
@@ -146,7 +148,7 @@ const Individual = props => (
 )
 
 const Rank = props => (
-  <table className="table is-fullwidth is-bordered is-marginless has-background-warning animated fadeIn">
+  <table className="table is-fullwidth is-bordered is-marginless animated fadeIn">
     <thead>
       <tr>
         <th>Reto</th>

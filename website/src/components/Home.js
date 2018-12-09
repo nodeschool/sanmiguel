@@ -2,6 +2,34 @@ import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import logo from "../assets/img/logo.svg"
 import config from "../assets/js/particlesjs-config"
+
+class ImgLoader extends Component {
+  state = {
+    imageLoaded: false
+  }
+  async componentDidMount() {
+    let img = await fetch(this.props.e.avatar_url)
+    let blob = await img.blob()
+    this.setState({ imageLoaded: URL.createObjectURL(blob) })
+  }
+  render() {
+    const { e } = this.props
+    return this.state.imageLoaded ? (
+      <a
+        className="grid-item animated fadeIn slower"
+        href={e.html_url}
+        target="_blank"
+        rel="noopener noreferrer">
+        <div
+          className="pic"
+          style={{ backgroundImage: `url(${this.state.imageLoaded})` }}
+          title={e.login}
+        />
+      </a>
+    ) : null
+  }
+}
+
 class App extends Component {
   state = {
     stargazers: false,
@@ -81,18 +109,7 @@ class App extends Component {
               key={rowIndex}
               style={hasCustomEl ? { ...tempStyle } : null}>
               {row.map((e, i) => (
-                <a
-                  className="grid-item animated fadeIn slower"
-                  key={`Stargazer-${rowIndex}-${i}`}
-                  href={e.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <div
-                    className="pic"
-                    style={{ backgroundImage: `url(${e.avatar_url})` }}
-                    title={e.login}
-                  />
-                </a>
+                <ImgLoader e={e} key={`Stargazer-${rowIndex}-${i}`} />
               ))}
             </div>
           )

@@ -70,17 +70,23 @@ const Profiles = ({ profiles }) => (
                 className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
                 to={"/reconocimientos/" + e.replace(/ /gi, "_").trim()}
                 replace>
-                <i
-                  className="icon ion-ios-paper is-hidden-mobile"
-                  style={{ marginRight: "0.3rem" }}
-                />
-                Reconocimientos
+                <i className="icon ion-ios-paper is-hidden-mobile" />
+                <span>Reconocimientos</span>
               </Link>
             </td>
           </tr>
         ))}
       </tbody>
     </table>
+    <div className="buttons">
+      <Link
+        className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
+        to="/">
+        <span>NodeSchool SM</span>
+
+        <i className="icon ion-ios-arrow-forward is-size-5" />
+      </Link>
+    </div>
   </div>
 )
 
