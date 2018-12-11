@@ -2,5 +2,13 @@ nombre: Denny Portillo
 tema: 
   introduccion a reactjs:
     titulo: Introducción a React JS
-    fecha: 03-06-2018
+    fecha: 06-10-2018
+    tipo: taller
+  introduccion a markdown:
+    titulo: Introducción a MarkDown
+    fecha: 13-10-2018
+    tipo: taller
+  git y github:
+    titulo: Git & GitHub
+    fecha: 20-10-2018
     tipo: taller

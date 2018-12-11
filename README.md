@@ -63,18 +63,18 @@ Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se ne
 <tbody>
 <tr>
 <td>
-<a href="https://github.com/D3Portillo"><img src="https://avatars1.githubusercontent.com/u/26236985?v=4" width="280"></a>
+<a href="https://github.com/D3Portillo"><img src="https://avatars1.githubusercontent.com/u/26236985?v=4" width="240"></a>
 </td>
 <td>
-<a href="https://github.com/DavidAlvarado0"><img src="https://avatars2.githubusercontent.com/u/39206627?v=4" width="280"></a>
+<a href="https://github.com/DavidAlvarado0"><img src="https://avatars2.githubusercontent.com/u/39206627?v=4" width="240"></a>
 </td>
 </tr>
 <tr>
 <td>
-<a href="https://github.com/bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/13499566?v=4" width="280"></a>
+<a href="https://github.com/bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/13499566?v=4" width="240"></a>
 </td>
 <td>
-<a href="https://github.com/moudev"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="280"></a>
+<a href="https://github.com/moudev"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="240"></a>
 </td>
 </tr>
 </tbody>
