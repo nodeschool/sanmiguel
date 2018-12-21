@@ -37,7 +37,9 @@
 
 		<div class="container">
 			<h2 class="mt-4">Taller Chart.js en Nodeschool San Miguel</h2>
-			<div style="width: 70%;height: 70%;"><canvas id="lienzo"></canvas></div>
+			<div style="position:relative;"> 
+				<canvas class="my-4" id="lienzo" width="800" height="380"></canvas>
+			</div>
 		</div>
 
 		<script>
@@ -71,6 +73,8 @@
 					]
 				},
 				options: {
+					responsive: true,
+                	maintainAspectRatio:false,
 					title: {
 						position: "top", // bottom, right, left
 						display: true,
