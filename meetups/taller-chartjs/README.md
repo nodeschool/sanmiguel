@@ -1,5 +1,8 @@
 # TALLER CHART.JS 
 ##  [NODESCHOOL SAN MIGUEL](https://nodeschool.io/sanmiguel/)
+
+##  [Ver Taller Terminado](https://5c1c20718cd35e37999ab070--modest-saha-93dbe9.netlify.com/)
+
 ### Impartido los dias 8 y 15 de diciembre de 2018.
 ![chartjs](./img/chartjs.jpg)
 ## QUE ES CHARTJS
