@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import logo from "../assets/img/logo.svg"
 import config from "../assets/js/particlesjs-config"
 
+// image wrapper
 class ImgLoader extends Component {
   state = {
     imageLoaded: false
@@ -12,6 +13,7 @@ class ImgLoader extends Component {
     let blob = await img.blob()
     this.setState({ imageLoaded: URL.createObjectURL(blob) })
   }
+
   render() {
     const { e } = this.props
     return this.state.imageLoaded ? (
@@ -30,14 +32,14 @@ class ImgLoader extends Component {
   }
 }
 
+// Main app render
 class App extends Component {
   state = {
     stargazers: false,
     stargazersRows: []
   }
   async componentDidMount() {
-    window.onload = _ =>
-      setTimeout(_ => window.particlesJS("particles", config), 300)
+    window.particlesJS("particles", config)
 
     window.onresize = _ => {
       window.particlesJS("particles", config)

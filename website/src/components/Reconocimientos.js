@@ -85,13 +85,20 @@ const Found = ({ data, params }) => (
     style={{
       backgroundImage: `url(${svg})`,
       backgroundColor: "#efeeee",
-      minHeight: "45rem",
+      minHeight: "100vh",
       alignItems: "center",
       flexDirection: "column",
       justifyContent: "center",
       backgroundPosition: "center",
       backgroundSize: "cover"
     }}>
+    <style>
+      {`
+      body *{
+        color: #212121 !important
+      }
+      `}
+    </style>
     <img
       src={logo}
       alt=""
@@ -132,10 +139,44 @@ const Found = ({ data, params }) => (
       {moment(data.fecha, "DD-MM-YYYY").format("dddd D [de] MMMM [del] YYYY")}{" "}
       en la ciudad de San Miguel, El Salvador
     </h1>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-end",
+        justifyContent: "center"
+      }}>
+      <img
+        src={require("../assets/img/d3 sign black.png")}
+        style={{ width: "5rem" }}
+        alt="sign"
+      />
+      <div style={{ marginLeft: "-1.9rem" }}>
+        <div
+          style={{
+            textAlign: "left",
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: "bold"
+          }}>
+          nny Portillo
+        </div>
+        <div
+          style={{
+            textAlign: "left",
+            marginTop: "-0.5rem",
+            marginLeft: "-0.5rem",
+            fontSize: "0.9rem",
+            fontFamily: "'Poppins', sans-serif"
+          }}>
+          ORGANIZADOR
+        </div>
+      </div>
+    </div>
+
     <pre
       className="help"
       style={{
-        marginBottom: "3rem",
+        margin: "2rem 0 3rem 0",
         background: "rgba(255,255,255,0.4)",
         borderRadius: "4px",
         overflow: "auto",

@@ -2,60 +2,48 @@
 
 Si recien entras a la comunidad no te sientas mal y no dejes de asistir, al contrario sientete feliz ya que repasaras todo lo que hemos visto :nerd_face:
 
+## IMPORTANTE
 
-## Resumen Rapido (para los que prefieren leer y practicar por su cuenta)
-> A continuacion se te muestra una lista de temas que han sido impartidos en los meetups semanales
+En NodeSchool San Miguel se tienen 2 modalidades, que se alternan cada Sábado.
 
-- Introducción a JS
+- Una trata de presentar Charlas y Talleres sin relación necesaria del curriculum actual
+
+- La otra es el seguimiento de un listado de temas **curriculum** a aprender para una tecnologia o lenguaje especifico.
+
+En este apartado puedes encontrar las lecturas del **curriculum** que se sigue el día que se toma la modalidad de Clase y WorkShop., esté curriculum se cambiara al culimar con un proyecto realizado por la comunidad.
+
+> Abajo puedes ver en orden los curriculums de aprendizaje actuales
+
+## Curriculum para Javascript
+
 - Classe Array
-  - Metodos
-    - find
-    - splice
-    - slice
-    - push
-    - pop
-    - shift
-    - indexOf
-    - filter
-    - map
-    - forEach
-    - reverse
-    - join
-  - Propiedades
-     - lenght
-  - Info
-     - https://www.w3schools.com/jsref/jsref_obj_array.asp
-     - https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array
+  - find
+  - splice
+  - slice
+  - push
+  - pop
+  - shift
+  - indexOf
+  - filter
+  - map
+  - forEach
+  - reverse
+  - join
+  - lenght
 - Clase Object y JSON
-  - metodos
-    - stringify
-    - parse
-  - info
-    - https://www.w3schools.com/jsref/jsref_obj_json.asp
-    - [Introduccion-JSON](Introduccion-JSON/JSON%20-%20Arrays%20Objects.pdf)
+  - stringify
+  - parse
 - Clase Math
-  - metodos 
-    - round
-    - random
-  - info
-    - https://www.w3schools.com/jsref/jsref_obj_math.asp
+  - round
+  - random
 - Clase String
-  - metodos
-    - substr
-    - match
-    - replace
-    - split
-    - trim
-   - info
-     - https://www.w3schools.com/jsref/jsref_obj_string.asp
-     - https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String
-- HTML
-  - [Introduccion](https://www.w3schools.com/html/default.asp)
-  - [Lista de tags](https://www.w3schools.com/html/html_lists.asp)
-  
-- DOM 
-  - Virtual DOM y DOM HTML
-    - [Lectura](DOM%20y%20Virtual%20DOM/README.md)
-    - [Practica](jugando%20con%20el%20DOM/README.md)
-- Introducción a ReactJS
-  - [Lectura y Practica](introduccion%20a%20reactjs/README.md)
+  - substr
+  - match
+  - replace
+  - split
+  - trim
+- Virtual DOM y DOM HTML
+- Repazo general antes de proyecto
+- Proyecto: 
+
+#### El ultimo curriculum sería el qué se sigue actualmente
