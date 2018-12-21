@@ -1,12 +1,33 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import { Font } from "@react-pdf/renderer"
+import Full from "./Full"
 const yaml = require("js-yaml")
+const moment = require("moment")
 
+Font.register(
+  "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/Roboto-Light.ttf",
+  { family: "Roboto" }
+)
+
+Font.register(
+  "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/RobotoCondensed-Bold.ttf",
+  { family: "Roboto-bold" }
+)
+
+Font.register(
+  "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/CamingoCode-Regular.ttf",
+  { family: "Code" }
+)
+
+Font.registerHyphenationCallback(word => [word])
 class Man extends Component {
   state = {
     curState: "Loading",
     manName: "",
-    temas: []
+    temas: [],
+    jsonData: {},
+    curPdf: null
   }
 
   getMan = async _ => {
@@ -24,14 +45,12 @@ class Man extends Component {
       const temas = await Object.keys(text.tema).map(
         e => e[0].toUpperCase() + e.substr(1)
       )
-      this.setState(
-        {
-          temas,
-          curState: "Found",
-          manName: text.nombre
-        },
-        _ => console.log(this.state.temas)
-      )
+      this.setState({
+        temas,
+        curState: "Found",
+        manName: text.nombre,
+        jsonData: text
+      })
     }
   }
 
@@ -45,6 +64,40 @@ class Man extends Component {
     }
   }
 
+  generatePDF = async tema => {
+    tema = tema.toLowerCase()
+    let _tema = tema.replace(/ /gi, "_").trim()
+    let json = await this.state.jsonData.tema[tema]
+    let realName = await this.state.jsonData.nombre
+    let type = json.tipo === "taller" ? "EL TALLER" : "LA CHARLA"
+    let date = moment(json.fecha, "DD-MM-YYYY").format(
+      "dddd D [de] MMMM [del] YYYY"
+    )
+    let title = json.titulo
+    let url = `https://nodeschool.io/sanmiguel/#reconocimientos/${
+      this.props.match.params.man
+    }/${_tema}`
+    let pdfName = `${this.props.match.params.man} - ${_tema}`
+    this.setState(
+      {
+        curPdf: null
+      },
+      _ =>
+        this.setState({
+          curPdf: (
+            <Full
+              url={url}
+              date={date}
+              name={realName}
+              type={type}
+              tema={title}
+              pdfName={pdfName}
+            />
+          )
+        })
+    )
+  }
+
   render() {
     return (
       <State
@@ -52,6 +105,8 @@ class Man extends Component {
         temas={this.state.temas}
         man={this.props.match.params.man}
         manName={this.state.manName}
+        generatePDF={this.generatePDF}
+        curPdf={this.state.curPdf}
       />
     )
   }
@@ -65,7 +120,7 @@ const State = props => {
   }[props.stage]
 }
 
-const Found = ({ temas, man, manName }) => (
+const Found = ({ temas, man, manName, generatePDF, curPdf }) => (
   <div
     className="column is-12 is-flex"
     style={{
@@ -104,17 +159,24 @@ const Found = ({ temas, man, manName }) => (
           <tr key={e}>
             <td>{e}</td>
             <td className="has-text-right">
-              <a
-                className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
-                href={`https://nodeschool.io/sanmiguel/#reconocimientos/${man}/${e
-                  .replace(/ /gi, "_")
-                  .trim()
-                  .toLowerCase()}`}
-                target="_blank"
-                rel="noopener noreferrer">
-                <span>Ver</span>
-                <i className="icon ion-md-open" />
-              </a>
+              <div style={{ minWidth: "7rem" }}>
+                <span
+                  className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
+                  onClick={_ => generatePDF(e)}>
+                  <i className="icon ion-md-download" />
+                </span>
+                <a
+                  className="button is-dark is-radiusless has-text-warning has-text-weight-bold"
+                  href={`https://nodeschool.io/sanmiguel/#reconocimientos/${man}/${e
+                    .replace(/ /gi, "_")
+                    .trim()
+                    .toLowerCase()}`}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <span>Ver</span>
+                  <i className="icon ion-md-open" />
+                </a>
+              </div>
             </td>
           </tr>
         ))}
@@ -128,6 +190,7 @@ const Found = ({ temas, man, manName }) => (
         <span>Volver</span>
       </Link>
     </div>
+    <div className="is-hidden">{curPdf}</div>
   </div>
 )
 
