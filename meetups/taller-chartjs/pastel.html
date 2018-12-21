@@ -34,9 +34,11 @@
             </ul>					  
         </div>
     </nav>
-    <div class="container">        
+    <div class="container-fluid">        
         <h1 class="mt-4">Taller Chart.js en Nodeschool San Miguel</h1>
-        <div style="width: 70%;"><canvas id="lienzo"></canvas></div>
+        <div style="position:relative;">
+            <canvas class="my-4" id="lienzo" width="800" height="380"></canvas>
+        </div>
     </div>
 
     <script>
@@ -47,13 +49,15 @@
                 labels:['Sublime Text', 'VS Code', 'Atom', 'Emacs', 'Vim', 'Webstorm'],
                 datasets:[{
                     data: [4478, 14492, 3354, 610, 4467, 4304],
-                    backgroundColor: ['#6bd5e1', '#ffd98e', '#ffb677', '#ff8364', '#fb929e', '#aedefc'],
+                    backgroundColor: ['#6bd5e1', '#059BFF', '#ffb677', '#ff8364', '#fb929e', '#aedefc'],
                     borderWidth: 1,
                     borderColor: '#FFF',
                     label:'Javascript Frameworks'
                 }]
             },
             options: {
+                responsive: true,
+                maintainAspectRatio:false,
                 title:{
                     position: 'top', // bottom, right, left
                     display: true,
@@ -62,7 +66,7 @@
                 },
                 legend:{
                     display: true,
-                    position: 'right'
+                    position: 'bottom'
                 }
             }
         });
