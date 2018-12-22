@@ -8,10 +8,11 @@ import {
   Image,
   View,
   StyleSheet,
-  BlobProvider
+  BlobProvider,
+  Font
 } from "@react-pdf/renderer"
 import FileSaver from "file-saver"
-
+Font.registerHyphenationCallback(word => [word])
 const styles = StyleSheet.create({
   title: {
     fontSize: 30,
@@ -33,8 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     textAlign: "center",
     width: "80%",
-    color: "#212121",
-    marginTop: 20
+    color: "#212121"
   },
   image: {
     position: "absolute",
@@ -60,7 +60,8 @@ const Full = ({ url, date, name, type, tema, pdfName }) => {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            justifyContent: "center"
+            justifyContent: "center",
+            paddingBottom: 30
           }}
           fixed>
           <Text style={styles.title}>La Comunidad de</Text>
@@ -74,7 +75,12 @@ const Full = ({ url, date, name, type, tema, pdfName }) => {
           <Text style={styles.subtitle}>
             El día {date} en la ciudad de San Miguel, El Salvador
           </Text>
-
+          <Text style={styles.pre}>
+            Verificable en:
+          </Text>
+          <Text style={styles.pre}>
+            {url}
+          </Text>
           <View
             style={{
               display: "flex",
@@ -106,10 +112,6 @@ const Full = ({ url, date, name, type, tema, pdfName }) => {
               </Text>
             </View>
           </View>
-          <Text style={styles.pre}>
-            Verificar en:
-            {url}
-          </Text>
         </View>
       </Page>
     </Document>

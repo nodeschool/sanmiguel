@@ -182,7 +182,7 @@ const Found = ({ data, params }) => (
         overflow: "auto",
         maxWidth: "90vw"
       }}>
-      Verificar en: https://nodeschool.io/sanmiguel/#reconocimientos/
+      Verificable en: https://nodeschool.io/sanmiguel/#reconocimientos/
       {params.man}/{params.topic}
     </pre>
   </div>

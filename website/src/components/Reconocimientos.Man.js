@@ -20,7 +20,6 @@ Font.register(
   { family: "Code" }
 )
 
-Font.registerHyphenationCallback(word => [word])
 class Man extends Component {
   state = {
     curState: "Loading",
