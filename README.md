@@ -41,7 +41,7 @@ Debido a que hay casos en los cuales un miembro no puede asistir o eres alguien 
 
 [![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
 
-Puedes colaborar con el proyecto, ya sea asistiendo y tomando algún cargo dentro de l comunidad, o si prefieres colabora con el sitio web o cualquier otro archivo de este repositorio el cual creas que puede mejorar. Agradeceremos tu ayuda. Realiza el respectivo PR para que se evalue tu colaboración y se apruebe.
+Puedes colaborar con el proyecto, ya sea asistiendo y tomando algún cargo dentro de la comunidad, o si prefieres colabora con el sitio web o cualquier otro archivo de este repositorio el cual creas que puede mejorar. Agradeceremos tu ayuda. Realiza el respectivo PR para que se evalue tu colaboración y se apruebe.
 
 En el caso que quieras colaborar con patrocinio a este proyecto y mejorar las condiciones para que siga creciendo, puedes contactarte con cualquier de los administradores. Cualquier ayuda será bienvenida.
 
