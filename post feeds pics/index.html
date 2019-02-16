@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Post feed "App" for NSSM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./style.css" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-box">
+        <h1 contenteditable="true" spellcheck="false">
+          El titulo de la onda algo grandecito
+        </h1>
+        <h2 contenteditable="true" spellcheck="false">El Que Dará La Onda</h2>
+      </div>
+      <div class="bg">
+        <img src="./profile.jpg" alt="" />
+      </div>
+      <img src="./bg.png" alt="" />
+      <div class="profile">
+        <img src="./profile.jpg" alt="" />
+      </div>
+    </div>
+    <div class="buttons">
+      <button onclick="changepics()">Cambiar imagen</button>
+      <button onclick="generate()">Generar y descargar</button>
+    </div>
+    <input type="file" name="" id="hidden-images" />
+    <script src="./js.js"></script>
+  </body>
+</html>
