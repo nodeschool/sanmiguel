@@ -1,11 +1,11 @@
 # Introducción a Flask
-#####Desarrollo Web Con Python
+##### Desarrollo Web Con Python
 
 Cuando hablamos de desarrollo web con Python, lo primero que se nos viene a la mente es "Django" pero en realidad hay una gran variedad de frameworks web, unos más famosos que otros, bueno ya sabemos cual es el más famoso (django), pero el día de hoy vamos a hablar acerca de Flask, este es un framework minimalista, "Así se hacen llamar ellos", pues a diferencia de Django, este no trae pilas incluidas.
 
 Eso lo puedes ver como una desventaja o ventaja, pues elegir uno u otro depende de las necesidades que tengamos, Flask es una gran opción, cuando lo que queremos es simplicidad, entender todos los documentos de que estamos creando, pues este no te crea tantos documentos como Django y para un principiante (como yo) puede ser muy difícil entender qué está sucediendo pues gran parte de trabajo lo hace el framework por su cuenta, (Esto no tiene nada de malo, pues lo que queremos es productividad, y al venir con baterías incluidas nos ayuda a avanzar más rápido los proyectos), pero esto no quiere decir que con Flask no se pueda hacer lo que se hace con Django, pero como todo, es cuestión de gustos.
 
-##Flask
+## Flask
 ![Flask](./img/flask.png)
 ## Sitio Oficial:   [http://flask.pocoo.org/](http://flask.pocoo.org/)
 
@@ -40,7 +40,7 @@ def stream():
     return render_template('index.html')
 ```
 ***
-###CSS Y JS
+### CSS Y JS
 Para poder agregar y renderizar archivos como css y js usamos un metodo llamado "url_for", que tenemos que importar.
 
 ```python
@@ -54,7 +54,7 @@ Una vez importado creamos una carpeta que por convencion la llameramos "static" 
 Como podemos ver lo que estamos haciendo es indicarle donde buscar el archivo y el nombre del archivo, lo mismo se hace con los archivos de js.
 
 ***
-###DRY
+### DRY
 Si podemos evitar repetir algo, evitemoslo! 
 Podemos evitar repetir código en las templates de la siguiente manera:
 
@@ -87,7 +87,7 @@ Ahora podemos reutilizar este layout en otro template:
 ```
 ***
 
-:fa-archive:  [Diapositvas](https://docs.google.com/presentation/d/12a0_CapH29i8UUDiZXWXs-h-IKf9eLTpxFAFkfIWYoM/edit?usp=sharing "Diapositivas")
-:fa-user: [Jorge Monge](https://github.com/monge1h "Jorge Monge")
-:fa-link: [monge.xyz](http://monge.xyz "www.monge.xyz")
+- :tv:  [Diapositvas](https://docs.google.com/presentation/d/12a0_CapH29i8UUDiZXWXs-h-IKf9eLTpxFAFkfIWYoM/edit?usp=sharing "Diapositivas")
+- :raising_hand: [Jorge Monge](https://github.com/monge1h "Jorge Monge")
+- :earth_asia: [monge.xyz](http://monge.xyz "www.monge.xyz")
 
