@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% block content%}
+<!-- Usamos un for para recorrer la lista que le estamos pasando -->
+    {% for stream in streams %}
+    <iframe
+    src="https://player.twitch.tv/?channel={{ stream }}"
+    height="720"
+    width="1080"
+    frameborder="0"
+    scrolling="no"
+    allowfullscreen="no">
+</iframe>
+<iframe frameborder="0"
+    scrolling="no"
+    id="chat_embed"
+    src="https://www.twitch.tv/embed//chat={{stream}}"
+    height="720"
+    width="290">
+</iframe>
+{% endfor %}
+{% endblock %}
