@@ -1,5 +1,7 @@
 # Introducción a Flask
+
 ### Desarrollo Web Con Python
+
 
 Cuando hablamos de desarrollo web con Python, lo primero que se nos viene a la mente es "Django" pero en realidad hay una gran variedad de frameworks web, unos más famosos que otros, bueno ya sabemos cual es el más famoso (django), pero el día de hoy vamos a hablar acerca de Flask, este es un framework minimalista, "Así se hacen llamar ellos", pues a diferencia de Django, este no trae pilas incluidas.
 
@@ -94,6 +96,5 @@ Ahora podemos reutilizar este layout en otro template:
 - GitHub: [Monge1h](https://github.com/monge1h "Jorge Monge")
 - Sitio Web: [monge.xyz](http://monge.xyz "www.monge.xyz")
 - Presentación: [Diapositvas](https://docs.google.com/presentation/d/12a0_CapH29i8UUDiZXWXs-h-IKf9eLTpxFAFkfIWYoM/edit?usp=sharing "Diapositivas")
-
 
 
