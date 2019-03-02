@@ -8,3 +8,7 @@ tema:
     titulo: Metodologías para escribir CSS
     fecha: 17-11-2018
     tipo: charla
+  gnu emacs:
+    titulo: GNU Emacs; el 'Editor de texto' del que nadie te comenta
+    fecha: 02-03-2019
+    tipo: charla
