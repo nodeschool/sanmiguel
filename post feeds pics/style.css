@@ -72,12 +72,21 @@ body * {
   height: 200px;
   z-index: 2;
 }
+.text-box p {
+  color: #746d75;
+  font-size: 17px;
+  text-align: right;
+  position:absolute;
+  right: 0px;
+  top: -7px;
+  opacity: .6;
+}
 
 .text-box h1 {
   color: #fcba04;
   font-size: 40px;
   margin-left: 50px;
-  text-align: center;
+  text-align: right;
   min-height: 80px;
 }
 
