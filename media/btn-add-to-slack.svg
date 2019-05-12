@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 140 41"
+   style="enable-background:new 0 0 140 41;"
+   xml:space="preserve"
+   sodipodi:docname="btn-add-to-slack.svg"
+   inkscape:version="0.92.4 (unknown)"><metadata
+   id="metadata54"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs52" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1336"
+   inkscape:window-height="742"
+   id="namedview50"
+   showgrid="false"
+   inkscape:zoom="2.4071429"
+   inkscape:cx="52.335581"
+   inkscape:cy="25.849877"
+   inkscape:window-x="30"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#C7CACD;}
+	.st1{fill:#E01E5A;}
+	.st2{fill:#36C5F0;}
+	.st3{fill:#2EB67D;}
+	.st4{fill:#ECB22E;}
+</style>
+<title
+   id="title4">btn-add-to-slack</title>
+<desc
+   id="desc6">Created with Sketch.</desc>
+<g
+   id="Handoff-01"
+   sketch:type="MSPage">
+	<g
+   id="btn-add-to-slack"
+   sketch:type="MSLayerGroup">
+		<path
+   id="Mask-Copy-10"
+   sketch:type="MSShapeGroup"
+   class="st0"
+   d="m 6.5,0.5 h 127 c 3.3,0 6,2.7 6,6 v 28 c 0,3.3 -2.7,6 -6,6 H 6.5 c -3.3,0 -6,-2.7 -6,-6 v -28 c 0,-3.3 2.7,-6 6,-6 z"
+   inkscape:connector-curvature="0"
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd;stroke:#c7cacd" />
+		<g
+   id="g33">
+			<g
+   id="g13">
+				<path
+   class="st1"
+   d="m 15.1,23.4 c 0,1.3 -1,2.3 -2.3,2.3 -1.3,0 -2.3,-1 -2.3,-2.3 0,-1.3 1,-2.3 2.3,-2.3 h 2.3 z"
+   id="path9"
+   inkscape:connector-curvature="0"
+   style="fill:#e01e5a" />
+				<path
+   class="st1"
+   d="m 16.3,23.4 c 0,-1.3 1,-2.3 2.3,-2.3 1.3,0 2.3,1 2.3,2.3 v 5.8 c 0,1.3 -1,2.3 -2.3,2.3 -1.3,0 -2.3,-1 -2.3,-2.3 z"
+   id="path11"
+   inkscape:connector-curvature="0"
+   style="fill:#e01e5a" />
+			</g>
+			<g
+   id="g19">
+				<path
+   class="st2"
+   d="m 18.6,14.2 c -1.3,0 -2.3,-1 -2.3,-2.3 0,-1.3 1,-2.3 2.3,-2.3 1.3,0 2.3,1 2.3,2.3 v 2.3 z"
+   id="path15"
+   inkscape:connector-curvature="0"
+   style="fill:#36c5f0" />
+				<path
+   class="st2"
+   d="m 18.6,15.3 c 1.3,0 2.3,1 2.3,2.3 0,1.3 -1,2.3 -2.3,2.3 h -5.8 c -1.3,0 -2.3,-1 -2.3,-2.3 0,-1.3 1,-2.3 2.3,-2.3 z"
+   id="path17"
+   inkscape:connector-curvature="0"
+   style="fill:#36c5f0" />
+			</g>
+			<g
+   id="g25">
+				<path
+   class="st3"
+   d="m 27.9,17.7 c 0,-1.3 1,-2.3 2.3,-2.3 1.3,0 2.3,1 2.3,2.3 0,1.3 -1,2.3 -2.3,2.3 h -2.3 z"
+   id="path21"
+   inkscape:connector-curvature="0"
+   style="fill:#2eb67d" />
+				<path
+   class="st3"
+   d="m 26.7,17.7 c 0,1.3 -1,2.3 -2.3,2.3 -1.3,0 -2.3,-1 -2.3,-2.3 v -5.8 c 0,-1.3 1,-2.3 2.3,-2.3 1.3,0 2.3,1 2.3,2.3 z"
+   id="path23"
+   inkscape:connector-curvature="0"
+   style="fill:#2eb67d" />
+			</g>
+			<g
+   id="g31">
+				<path
+   class="st4"
+   d="m 24.4,26.9 c 1.3,0 2.3,1 2.3,2.3 0,1.3 -1,2.3 -2.3,2.3 -1.3,0 -2.3,-1 -2.3,-2.3 v -2.3 z"
+   id="path27"
+   inkscape:connector-curvature="0"
+   style="fill:#ecb22e" />
+				<path
+   class="st4"
+   d="m 24.4,25.8 c -1.3,0 -2.3,-1 -2.3,-2.3 0,-1.3 1,-2.3 2.3,-2.3 h 5.8 c 1.3,0 2.3,1 2.3,2.3 0,1.3 -1,2.3 -2.3,2.3 z"
+   id="path29"
+   inkscape:connector-curvature="0"
+   style="fill:#ecb22e" />
+			</g>
+		</g>
+		<g
+   id="g45">
+			
+			<path
+   d="m 95.6,18.2 c -0.1,-0.6 -0.6,-1.6 -2.1,-1.6 -1.1,0 -1.8,0.7 -1.8,1.4 0,0.6 0.4,1.1 1.2,1.3 l 1.6,0.3 c 2.1,0.4 3.2,1.7 3.2,3.3 0,1.7 -1.5,3.5 -4.1,3.5 -3,0 -4.3,-1.9 -4.5,-3.6 l 2,-0.5 c 0.1,1.1 0.9,2.1 2.5,2.1 1.2,0 1.8,-0.6 1.8,-1.4 0,-0.7 -0.5,-1.2 -1.4,-1.3 l -1.6,-0.3 c -1.8,-0.4 -3,-1.5 -3,-3.2 0,-2 1.8,-3.6 4,-3.6 2.8,0 3.8,1.7 4.1,2.9 z"
+   id="path35"
+   inkscape:connector-curvature="0" />
+			<path
+   d="M 99,26.2 V 14.6 h 2.1 v 11.6 z"
+   id="path37"
+   inkscape:connector-curvature="0" />
+			<path
+   d="m 104.7,21.7 1.9,-0.3 c 0.4,-0.1 0.6,-0.3 0.6,-0.6 0,-0.6 -0.4,-1 -1.3,-1 -0.9,0 -1.4,0.6 -1.5,1.3 l -1.9,-0.4 c 0.1,-1.2 1.3,-2.6 3.4,-2.6 2.5,0 3.4,1.4 3.4,3 V 25 c 0,0.4 0,1 0.1,1.2 h -2 c 0,-0.2 -0.1,-0.6 -0.1,-0.9 -0.4,0.6 -1.2,1.2 -2.3,1.2 -1.7,0 -2.7,-1.1 -2.7,-2.4 0,-1.5 1.1,-2.2 2.4,-2.4 z m 2.5,1.3 v -0.4 l -1.8,0.3 c -0.5,0.1 -1,0.4 -1,1 0,0.5 0.3,0.9 1,0.9 1,0 1.8,-0.4 1.8,-1.8 z"
+   id="path39"
+   inkscape:connector-curvature="0" />
+			<path
+   d="m 112.5,22.3 c 0,1.4 0.9,2.2 2,2.2 1.1,0 1.6,-0.7 1.8,-1.3 l 1.9,0.6 c -0.4,1.3 -1.6,2.7 -3.7,2.7 -2.3,0 -4.1,-1.8 -4.1,-4.2 0,-2.4 1.8,-4.2 4.1,-4.2 2.1,0 3.4,1.3 3.7,2.7 l -1.9,0.6 c -0.2,-0.7 -0.7,-1.3 -1.7,-1.3 -1.2,0 -2.1,0.7 -2.1,2.2 z"
+   id="path41"
+   inkscape:connector-curvature="0" />
+			<path
+   d="m 123.7,21.6 3.2,4.6 h -2.6 l -2.1,-3 -0.9,0.9 v 2.1 h -2.1 V 14.6 h 2.1 v 6.6 l 2.7,-2.9 h 2.8 z"
+   id="path43"
+   inkscape:connector-curvature="0" />
+		</g>
+	</g>
+</g>
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+   x="47.151337"
+   y="26.537092"
+   id="text58"><tspan
+     sodipodi:role="line"
+     id="tspan56"
+     x="47.151337"
+     y="26.537092"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;line-height:0;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold';letter-spacing:-0.34px">Goto</tspan></text>
+</svg>

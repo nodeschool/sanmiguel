@@ -1,8 +1,13 @@
-# ¿Te interesa unirte a NodeSchool San Miguel?
 
-Si te quieres unir a nuestro WorkShop en INJUVE, postea un issue diciendo : " **Quiero unirme!** " y pronto nos pondremos en contacto contigo
+# ¿Te interesa unirte a *NodeSchool San Miguel*?
 
-<img src="./logo.svg" width="380">
+[![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
+
+<img src="./media/logo-sm.png" width="380">
+
+Para unirte solicita una invitación para ser incluido a la lista de miembros por **SLACK** en donde se ponen notificaciones sobre las actividades de la comunidad, puedes hacerlo en el link de abajo.
+
+[![](./media/btn-add-to-slack.png)](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA)
 
 # ¿Cuánto cuesta?
 
@@ -19,13 +24,15 @@ La lista puede seguir...
 # ¿Dónde estamos ubicados?
 
 Actualmente estamos ubicados en [INJUVE](https://www.google.com/maps/place/Injuve+Swimming+Pool/@13.4805052,-88.1763071,17z/data=!3m1!4b1!4m5!3m4!1s0x8f7b2a7a14f8d5c3:0x385d67c125f3654!8m2!3d13.4805052!4d-88.1741184)
-, ya que es un lugar algo centrico de San Miguel
+, ya que es un lugar algo centrico de San Miguel.
 
-# Soy nuevo y quiero leer sobre lo que han impartido en los MeetUps
+# Soy nuevo y quiero leer sobre lo que han impartido en los meetUps
 
-Debido a que hay casos en los cuales un miembro no puede asistir o eres alguien nuevo, se ha establecido un directorio para almacenar el material que se imparte en cada charla, así tendrás una idea de lo que se imparte en NodeSchool San Miguel y puedes ponerte al día con los demás. [meetups](meetups)
+Debido a que hay casos en los cuales un miembro no puede asistir o eres alguien nuevo, se ha establecido un directorio para almacenar el material que se imparte en cada charla/taller, así tendrás una idea de los temas. [meetups](meetups)
 
-# Agenda para cada Sábado
+# Actividades para cáda sábado
+
+### Esto era antes
 
 | Hora          | Actividad                |
 | ------------- | ------------------------ |
@@ -35,27 +42,30 @@ Debido a que hay casos en los cuales un miembro no puede asistir o eres alguien 
 | 10:30 - 10:50 | Receso                   |
 | 10:50 - 11:30 | Practica                 |
 | 11:30 - 11:55 | Expocisión de resolución |
-| 11:55 - 12:00 | PicTime                  |
+| 11:55 - 12:00 | PicTime       
+           
+### Ahora
 
-# ¿Deseas Colaborar?
+En nodeschool dado que hay muchísimos temas de desarrollo Web tanto frontend como backend, y muchos lenguajes para hacer distintas cosas relacionadas a este tema, se ha tomado a bien presentar talleres y charlas impartidas por todos los miembros de nodeschool, además de si un día no se cuenta con charla o taller los organizadores se hace responsables de hacer actividades que de cierta manera saquen más nuestra humanidad, discutiendo temas entre miembros, realizando proyectos entre otras cosas geniales, todo esto junto con retos súper interesantes que -depende de los miembros si se dan a flote-.
 
-[![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
+Miremos Nodeschool San Miguel ( por ahora) como una comunidad en la que vos llegas presentas algun tema relacionado a desarrollo web, sea hardware, software, iot, asistencia técnica, lo que sea., y a los miembros les mostras lo que has aprendido porque te gusta lo que haces vos con el tópico en cuestión.
 
-Puedes colaborar con el proyecto, ya sea asistiendo y tomando algún cargo dentro de l comunidad, o si prefieres colabora con el sitio web o cualquier otro archivo de este repositorio el cual creas que puede mejorar. Agradeceremos tu ayuda. Realiza el respectivo PR para que se evalue tu colaboración y se apruebe.
+> **depende de los miembros si se dan a flote** , que significa?
 
-En el caso que quieras colaborar con patrocinio a este proyecto y mejorar las condiciones para que siga creciendo, puedes contactarte con cualquier de los administradores. Cualquier ayuda será bienvenida.
+En Nodeschool servimos como puente para impartir temas que se ven actualmente por desarrolladores grandiosos que intentamos imitar, dependera de cáda miembro si mejorar habilidades relacionadas a dichos temas o no.
 
-La mejor forma de que esto siga en ascenso es ayudando con la difusión del grupo, compartelo con tus conocidos y amigos. ¡Es una de las mejores formas de colaborar!
+- [Calendario de actividades](https://calendar.google.com/calendar?cid=dDJjbjJuM3RoZmI5bDRpdWhqYjZ1MmFhZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
-Recuerda que puedes colaborar a mejorar el sitio web de la comunidad [Website](website)
+# ¿Deseas colaborar manteniendo el sitio?
 
-# Código de Conducta
+Yaay :zap: :rainbow: cualquier PR es bienvenido, por el momento se sigue la guía de estilos de **Airbnb** para reactjs, pero con un distintivo :: **siempre comillas dobles ["] para strings, sniff: el teclado latam :keyboard::heart_eyes:**
+
+- [Guía de estilos](https://github.com/airbnb/javascript/tree/master/react)
+- [Website](./website)
+
+# Código de conducta
 
 Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se necesita establecer un código de conducta el cual te invitamos a leer y respetarlo. [Código de Conducta](CODE_OF_CONDUCT.md)
-
-# Miscellaneous
-
-- [Ejemplo de test](tests.md)
 
 # Organizadores
 
@@ -71,15 +81,15 @@ Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se ne
 </tr>
 <tr>
 <td>
-<a href="https://github.com/bryanlopezcodes" title="bryanlopezcpdes"><img src="https://avatars2.githubusercontent.com/u/13499566?v=4" width="120"></a>
+<a href="https://github.com/bryanlopezcodes" title="bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="120"></a>
 </td>
 <td>
-<a href="https://github.com/moudev" title="moudev"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="120"></a>
+<a href="https://github.com/moudev" title="moudev"><img src="https://avatars2.githubusercontent.com/u/13499566?v=4" width="120"></a>
 </td>
 </tr>
 </tbody>
 </table>
 
-# Agradecimientos
+# Agradecimientos especiales :sunglasses: :zap: :rocket: 
 
 - https://github.com/arnoldou
