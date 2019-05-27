@@ -8,15 +8,15 @@ Para unirte solicita una invitación para ser incluido a la lista de miembros po
 
 [<img src="./media/btn-add-to-slack.png" width="180">](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA)
 
-### Redes Sociales :fire:
+## Redes Sociales :fire:
 
 <table>
 <tbody>
-<td>
-<a href="https://www.facebook.com/nodeschoolsm/"><center><img src="./media/_ionicons_svg_logo-facebook.svg" height="50"/><br/>Facebook</center></a>
+<td align="center">
+<a href="https://www.facebook.com/nodeschoolsm/"><img src="./media/_ionicons_svg_logo-facebook.svg" height="50"/><br/>Facebook</a>
 </td>
-<td>
-<a href="https://www.instagram.com/nodeschoolsm/"><center><img src="./media/_ionicons_svg_logo-instagram.svg" height="50"/><br/>Instagram</center></a>
+<td align="center">
+<a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/_ionicons_svg_logo-instagram.svg" height="50"/><br/>Instagram</a>
 </td>
 </tbody>
 </table>
