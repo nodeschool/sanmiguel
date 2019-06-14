@@ -74,7 +74,6 @@ Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se ne
 <a href="https://github.com/bryanlopezcodes" title="bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="120"></a>
 </td>
 <td>
-<a href="https://github.com/moudev" title="moudev"><img src="https://avatars2.githubusercontent.com/u/13499566?v=4" width="120"></a>
 </td>
 </tr>
 </tbody>
