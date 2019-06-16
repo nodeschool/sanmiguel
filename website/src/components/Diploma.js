@@ -5,63 +5,12 @@ import { Nav } from "./PalList.parts"
 import { nameParser } from "./Home.helpers"
 import DiplomaLayout from "./DiplomaLayout"
 import "node-snackbar/dist/snackbar.min.css"
-import { Helmet } from "react-helmet"
-import { ShareBox } from "./Diploma.parts"
-const FS = require("file-saver")
-const PDFJS = window["pdfjs-dist/build/pdf"] || {}
+import { ShareBox, renderDiploma, save } from "./Diploma.parts"
 const yaml = require("js-yaml")
 const moment = require("moment")
 moment.locale("es")
 const url =
   "https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/"
-
-const renderDiploma = ({ blob, setDiploma, setBlob }) => {
-  PDFJS.getDocument(URL.createObjectURL(blob)).then(pdf => {
-    pdf.getPage(1).then(page => {
-      const canvas = document.createElement("canvas")
-      const scale = 1
-      const viewport = page.getViewport(scale)
-      const context = canvas.getContext("2d")
-      canvas.height = 595
-      canvas.width = 842
-      const renderContext = {
-        canvasContext: context,
-        viewport: viewport
-      }
-      page.render(renderContext).then(() => {
-        const imageURL = canvas.toDataURL()
-        fetch(imageURL)
-          .then(req => req.blob())
-          .then(img => {
-            setBlob({
-              img,
-              pdf: blob
-            })
-          })
-        setDiploma(
-          <div
-            className="ba center bw2 __preview"
-            style={{
-              width: "80vw",
-              maxWidth: "40rem",
-              backgroundImage: `url(${imageURL})`
-            }}>
-            <img
-              src={imageURL}
-              style={{ opacity: 0 }}
-              alt=""
-              className="is-block"
-            />
-          </div>
-        )
-      })
-    })
-  })
-}
-
-const save = ({ blob, name, format }) => {
-  FS.saveAs(blob, `${name.substr(0, 40)}.${format}`)
-}
 
 export default withRouter(
   ({
@@ -76,27 +25,26 @@ export default withRouter(
     const fetchData = async () => {
       const req = await fetch(url + `${pal.split("_").join("%20")}.yml`)
       const data = await req.text()
-      console.log(data)
       setInfo(yaml.load(data))
     }
     useEffect(() => {
       info || fetchData()
     }, [info])
-    const _topic = topic.split("_").join(" ")
-    const _pal = pal.split("_").join(" ")
-    const curTopic = info && info.tema[_topic]
-    const _to = pathname
-      .split("/")
-      .slice(0, -1)
-      .join("/")
-    const _url = `https://nodeschool.io/sanmiguel/#${pathname.substr(
+    const topicKey = topic.split("_").join(" ")
+    const curTopic = info && info.tema[topicKey]
+    const diplomaURL = `https://nodeschool.io/sanmiguel/#${pathname.substr(
       1
     )}`.replace(/\/raw$/, "")
-    const { titulo = false, fecha = false, tipo = false } = curTopic
+    const {
+      titulo = false,
+      fecha = false,
+      tipo = false,
+      codevent = false,
+      version = "1.0"
+    } = curTopic
     const [diploma, setDiploma] = useState(false)
     const [diplomaBlob, setBlob] = useState({ img: null, pdf: null })
     const [modal, showModal] = useState(false)
-
     const MainLayout = () => {
       return (
         <div className="container content">
@@ -105,9 +53,14 @@ export default withRouter(
               title={
                 info
                   ? `${info.nombre} / ${titulo}`
-                  : `${nameParser(_pal)} / ${nameParser(_topic)}`
+                  : `${nameParser(pal.split("_").join(" "))} / ${nameParser(
+                      topicKey
+                    )}`
               }
-              to={_to}
+              to={pathname
+                .split("/")
+                .slice(0, -1)
+                .join("/")}
             />
             {diploma ? (
               <>
@@ -166,21 +119,20 @@ export default withRouter(
       window.location.href = diploma.props.style.backgroundImage.slice(4, -1)
     return (
       <div className="Diploma has-background-warning">
-        <Helmet>
-          <title>Here's the Title!</title>
-          <meta property="og:title" content="Cambia" />
-          <meta property="og:description" content="Cambia alv" />
-        </Helmet>
-        {modal && <ShareBox data={_url} onHide={() => showModal(false)} />}
+        {modal && (
+          <ShareBox data={diplomaURL} onHide={() => showModal(false)} />
+        )}
         {!diploma && info && (
           <DiplomaLayout
-            url={_url}
+            url={diplomaURL}
             date={moment(fecha, "DD-MM-YYYY").format(
               "dddd DD [de] MMMM [del] YYYY"
             )}
             name={info.nombre}
             type={tipo}
             tema={titulo}
+            isCodevent={codevent}
+            version={version}
             onRender={blob => {
               console.log("Update")
               renderDiploma({ blob, setDiploma, setBlob })

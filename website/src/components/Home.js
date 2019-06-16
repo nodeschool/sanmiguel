@@ -188,7 +188,7 @@ export default class extends React.Component {
                 </a>
 
                 <a
-                  href="/#reconocimientos"
+                  href="https://nodeschool.io/sanmiguel/#reconocimientos"
                   rel="noopener noreferrer"
                   className="button --resize --custom-white is-light"
                   target="_blank">
