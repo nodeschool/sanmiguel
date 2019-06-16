@@ -13,7 +13,6 @@
     "node-snackbar": "^0.1.15",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.1",
     "tachyons": "^4.11.1"
