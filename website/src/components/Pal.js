@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { withRouter, Link } from "react-router-dom"
-import { Nav } from "./PalList.parts"
+import { withRouter } from "react-router-dom"
+import { Links, Nav, Loader  } from "./parts"
 import { nameParser } from "./Home.helpers"
 const yaml = require("js-yaml")
 const url =
@@ -33,26 +33,14 @@ export default withRouter(
                 {Object.keys(info.tema).map(key => {
                   const { titulo, tipo } = info.tema[key]
                   return (
-                    <Link
-                      to={`${pathname}/${key.split(" ").join("_")}`}
-                      style={{ borderWidth: 2 }}
-                      className="button  mt1 w-100 is-warning is-inverted is-outlined is-radiusless">
-                      <div className="w-100 flex items-center justify-start">
-                        <span className="flex-grow-1 has-text-left">
-                          {tipo.toUpperCase()}: {titulo}
-                        </span>
-                        <i className="icon ion-ios-arrow-forward" />
-                      </div>
-                    </Link>
+                    <Links to={`${pathname}/${key.split(" ").join("_")}`}>
+                      {tipo.toUpperCase()}: {titulo}
+                    </Links>
                   )
                 })}
               </div>
             ) : (
-              <div className="flex flex-grow-1 w-100 items-center justify-center">
-                <div className="animated flipInY infinite slower f2 b ba bw2 pv1 ph3">
-                  CARGANDO
-                </div>
-              </div>
+              <Loader />
             )}
           </div>
         </div>
