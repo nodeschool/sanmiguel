@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>VUE</title>
+</head>
+
+<body>
+  <div id="root">
+    <h1>Hello world!</h1>
+    <img :src="url" alt="">
+    <button @click="llamar">Prueba</button>
+  </div>
+  <script>
+    const url = "https://api.thecatapi.com/v1/images/search"
+    const app = new Vue({
+      el: "#root",
+      data: { url: "" },
+      mounted() {
+        this.llamar()
+      },
+      methods: {
+        llamar() {
+          fetch(url)
+            .then(res => res.json())
+            .then(json => {
+              this.url = json[0].url
+            })
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

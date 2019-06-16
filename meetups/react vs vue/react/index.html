@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>REACT</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+  const url = "https://api.thecatapi.com/v1/images/search"
+  class  Componente extends React.Component{
+    state = {
+      image: ""
+    }
+    componentDidMount(){
+      this.refetch()
+    }
+    refetch = ()=>{
+      fetch(url)
+        .then(res=>res.json())
+        .then(json=>{
+          this.setState({image: json[0].url})
+        })
+    }
+    render(){
+      return [
+        <h1>Hello, world!</h1>,
+        <img src={this.state.image}/>,
+        <button onClik={this.reff}>Prueba</button>
+      ]
+    }
+  }
+  ReactDOM.render(
+    <Componente/>,
+    document.getElementById('root')
+  );
+  </script>
+</body>
+
+</html>

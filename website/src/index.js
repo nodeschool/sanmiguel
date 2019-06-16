@@ -2,26 +2,20 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { HashRouter as Router, Route, Switch } from "react-router-dom"
 import NotFound from "./components/NotFound"
-import LeaderBoard from "./components/LeaderBoard"
-import Reconocimientos from "./components/Reconocimientos"
+import Diploma from "./components/Diploma"
 import Home from "./components/Home"
-import Man from "./components/Reconocimientos.Man"
-import List from "./components/Reconocimientos.List"
-import "bulma/css/bulma.min.css"
-import "./assets/css/index.css"
-
-const Routing = _ => {
+import Pal from "./components/Pal"
+import PalList from "./components/PalList"
+import "./assets/css/index.scss"
+const Routing = () => {
   return (
     <Router basename="/" hashType="noslash">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/leaderboard" component={LeaderBoard} />
-        <Route
-          path="/reconocimientos/:man/:topic"
-          component={Reconocimientos}
-        />
-        <Route path="/reconocimientos/:man" component={Man} />
-        <Route path="/reconocimientos" component={List} />
+        <Route path="/reconocimientos/:pal/:topic/:raw" component={Diploma} />
+        <Route path="/reconocimientos/:pal/:topic" component={Diploma} />
+        <Route path="/reconocimientos/:pal" component={Pal} />
+        <Route path="/reconocimientos" component={PalList} />
         <Route component={NotFound} />
       </Switch>
     </Router>
