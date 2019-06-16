@@ -29,8 +29,6 @@ Font.register({
 })
 
 const getDiplomaIMG = ({ isCodevent, version }) => {
-  version = version.toString()
-  version = version.includes(".") ? version : `${version}.0`
   const data = layouts[isCodevent ? version : "default"]
   return !!data ? data : defaultIMG
 }
@@ -44,6 +42,8 @@ export default memo(function({
   version = "1.0",
   onRender = () => console.log("pdf-rendered")
 }) {
+  version = version.toString()
+  version = version.includes(".") ? version : `${version}.0`
   const color = isCodevent ? "#FFFFFF" : "#212121"
   const styles = StyleSheet.create({
     title: {
