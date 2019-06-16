@@ -67,7 +67,7 @@ export const JoiningLinks = () => {
         </a>
         <a
           className="button is-large --resize is-warning ma1"
-          href="https://chat.whatsapp.com/2IZr2FEY1cI5oXOeiWF7yb"
+          href="https://chat.whatsapp.com/JfnmCNgjlaR3A7H8DBFRgz"
           target="_blank"
           rel="noopener noreferrer">
           <i className="icon ion-logo-whatsapp f3" />
