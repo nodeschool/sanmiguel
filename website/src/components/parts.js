@@ -14,11 +14,14 @@ export const Nav = ({ title = "", to = "/" }) => {
   )
 }
 
-export const Loader = (children = "CARGANDO") => {
+export const Loader = ({ children, className = "" }) => {
   return (
-    <div className="flex flex-grow-1 w-100 items-center justify-center">
+    <div
+      className={`flex flex-grow-1 w-100 items-center justify-center ${className}`}>
       <div className="animated flipInY infinite slower f2 b ba bw2 pv1 ph3">
-        {children}
+        {React.isValidElement(children) || typeof children === "string"
+          ? children
+          : "CARGANDO"}
       </div>
     </div>
   )

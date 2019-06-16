@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { withRouter } from "react-router-dom"
 import "moment/locale/es"
-import { Nav } from "./parts"
+import { Nav, Loader } from "./parts"
 import { nameParser } from "./Home.helpers"
 import DiplomaLayout from "./DiplomaLayout"
 import "node-snackbar/dist/snackbar.min.css"
@@ -105,11 +105,7 @@ export default withRouter(
                 </div>
               </>
             ) : (
-              <div className="flex flex-grow-1 w-100 items-center justify-center">
-                <div className="animated flipInY infinite slower f2 b ba bw2 pv1 ph3">
-                  CARGANDO
-                </div>
-              </div>
+              <Loader />
             )}
           </div>
         </div>
@@ -140,15 +136,7 @@ export default withRouter(
             }}
           />
         )}
-        {isRaw ? (
-          <div className="flex flex-grow-1 w-100 vh-100 items-center justify-center">
-            <div className="animated flipInY infinite slower f2 b ba bw2 pv1 ph3">
-              GENERANDO
-            </div>
-          </div>
-        ) : (
-          <MainLayout />
-        )}
+        {isRaw ? <Loader className="vh-100">GENERANDO</Loader> : <MainLayout />}
       </div>
     )
   }
