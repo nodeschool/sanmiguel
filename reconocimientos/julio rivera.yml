@@ -1,0 +1,8 @@
+nombre: Julio Rivera
+tema:
+  intro al deep learning:
+    titulo: Introducción al Deep Learning
+    fecha: 08-06-2019
+    tipo: charla
+    codevent: true
+    version: 1.0

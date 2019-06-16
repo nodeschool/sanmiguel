@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 import { nameParser } from "./Home.helpers"
-import { Nav } from "./PalList.parts"
+import { Nav, Loader, Links } from "./parts"
 const url =
   "https://api.github.com/repos/nodeschool/sanmiguel/contents/reconocimientos"
 export default () => {
@@ -24,26 +23,15 @@ export default () => {
               {contents.map(({ name }) => {
                 name = name.trim().slice(0, -4)
                 const _name = nameParser(name)
-
                 return (
-                  <Link
-                    to={`/reconocimientos/${name.split(" ").join("_")}`}
-                    style={{ borderWidth: 2 }}
-                    className="button  mt1 w-100 is-warning is-inverted is-outlined is-radiusless">
-                    <div className="w-100 flex items-center justify-start">
-                      <span className="flex-grow-1 has-text-left">{_name}</span>
-                      <i className="icon ion-ios-arrow-forward" />
-                    </div>
-                  </Link>
+                  <Links to={`/reconocimientos/${name.split(" ").join("_")}`}>
+                    {_name}
+                  </Links>
                 )
               })}
             </div>
           ) : (
-            <div className="flex flex-grow-1 w-100 items-center justify-center">
-              <div className="animated flipInY infinite slower f2 b ba bw2 pv1 ph3">
-                CARGANDO
-              </div>
-            </div>
+            <Loader />
           )}
         </div>
       </div>

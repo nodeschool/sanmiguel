@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { withRouter } from "react-router-dom"
 import "moment/locale/es"
-import { Nav } from "./PalList.parts"
+import { Nav } from "./parts"
 import { nameParser } from "./Home.helpers"
 import DiplomaLayout from "./DiplomaLayout"
 import "node-snackbar/dist/snackbar.min.css"
-import { ShareBox, renderDiploma, save } from "./Diploma.parts"
+import { ShareBox } from "./Diploma.parts"
+import { renderDiploma, save } from "./Diploma.helpers"
 const yaml = require("js-yaml")
 const moment = require("moment")
 moment.locale("es")

@@ -1,6 +1,6 @@
-# Gracias! :heart_eyes: :zap:
+# TY :zap:
 
-> Este README contiene info necesaria para contribuir en el desarrollo del sitio :<>
+> Este README contiene info necesaria para contribuir en el desarrollo del sitio :c
 
 # Component Styling
 
@@ -16,12 +16,16 @@ We can have our main component logic at `Home.js` and any other Component child 
 
 ```shell
 components
+|--parts.js
+|--helpers.js
 |--Home.js
 |--Home.parts.js
 |--Home.helpers.js
 ```
 
-Also it helps making sense on imports, see:
+> parts and helpers are helper functions or component parts from all components tree inside **components** folder
+
+This also helps making understandable and readable imports, see:
 
 ```js
 import { Loader } from "./Home.parts"
