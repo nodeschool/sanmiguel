@@ -92,6 +92,7 @@ Yaay :zap: :rainbow: cualquier PR es bienvenido, por el momento se sigue la guí
 <a href="https://github.com/bryanlopezcodes" title="bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="120"></a>
 </td>
 <td>
+<a href="https://github.com/moudevs" title="moudev"><img src="https://avatars3.githubusercontent.com/u/13499566?v=4" width="120"></a>
 </td>
 </tr>
 </tbody>

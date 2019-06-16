@@ -20,8 +20,8 @@
   },
   "homepage": "./",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "node ./src/assets/diplomas && react-scripts build"
+    "start": "node ./src/assets/diplomas && react-scripts start",
+    "build": "react-scripts build"
   },
   "license": "MIT",
   "browserslist": [
