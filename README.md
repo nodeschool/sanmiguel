@@ -2,21 +2,21 @@
 
 [![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
 
-<img src="./media/logo-sm.png" width="380">
+<img src="./logo.svg" width="320">
 
 Para unirte solicita una invitación para ser incluido a la lista de miembros por **SLACK** en donde se ponen notificaciones sobre las actividades de la comunidad, puedes hacerlo en el link de abajo.
 
-[<img src="./media/btn-add-to-slack.png" width="180">](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA)
+[<img src="./media/info/slack.png" width="140">](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA)
 
 ## Redes Sociales :fire:
 
 <table>
 <tbody>
 <td align="center">
-<a href="https://www.facebook.com/nodeschoolsm/"><img src="./media/_ionicons_svg_logo-facebook.svg" height="50"/><br/>Facebook</a>
+<a href="https://www.facebook.com/nodeschoolsm/"><img src="./media/info/facebook.svg" height="50"/><br/>Facebook</a>
 </td>
 <td align="center">
-<a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/_ionicons_svg_logo-instagram.svg" height="50"/><br/>Instagram</a>
+<a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/info/instagram.svg" height="50"/><br/>Instagram</a>
 </td>
 </tbody>
 </table>
@@ -74,6 +74,8 @@ Yaay :zap: :rainbow: cualquier PR es bienvenido, por el momento se sigue la guí
 - [Guía de estilos para git](https://github.com/horchatajs/website/blob/master/.github/GIT_STYLEGUIDE.md), psst: tomada de https://github.com/horchatajs
 
 # Organizadores
+
+> Si lo fuiste una vez, seguiras en esta lista <3
 
 <table>
 <tbody>
