@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
-export const ImageLoader = ({ e }) => {
-  const [imageLoaded, setImage] = useState(false)
-  const fetchImage = async () => {
-    let img = await fetch(e.avatar_url)
-    img = await img.blob()
-    img = URL.createObjectURL(img)
-    setImage(img)
-  }
+export const Sponsors = () => {
+  const [sponsors, setSponsors] = useState([])
   useEffect(() => {
-    imageLoaded || fetchImage()
-  }, [imageLoaded])
+    const _fetch = async () => {
+      const req = await fetch(
+        "https://na9izifwg4.execute-api.us-east-1.amazonaws.com/production/api/sponsors"
+      )
+      const data = await req.json()
+      setSponsors(data)
+    }
+    sponsors.length || _fetch()
+  }, [sponsors])
   return (
-    imageLoaded && (
-      <a
-        className="grid-item animated fadeIn slower"
-        href={e.html_url}
-        target="_blank"
-        rel="noopener noreferrer">
-        <div
-          className="pic"
-          style={{ backgroundImage: `url(${imageLoaded})` }}
-          title={e.login}
-        />
-      </a>
-    )
+    <div className="flex items-center justify-center">
+      {sponsors.map(({ image, slug, site }) => {
+        return (
+          <a
+            href={site}
+            title={slug}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animated fadeIn flex items-center justify-center pa2"
+            style={{
+              background: "white",
+              minHeight: "4.2rem"
+            }}
+          >
+            <img src={image} alt={slug} />
+          </a>
+        )
+      })}
+    </div>
   )
 }
 
@@ -40,7 +48,8 @@ export const JoiningLinks = () => {
           href="https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA"
           target="_blank"
           title="Preferido"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <i className="icon ion-logo-slack f3" />
           <span>Slack</span>
         </a>
@@ -48,7 +57,8 @@ export const JoiningLinks = () => {
           className="button is-large --resize is-warning ma1"
           href="https://discord.gg/VzKQtup"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <img
             src={require("../assets/img/discord.svg")}
             className="mr2"
@@ -61,7 +71,8 @@ export const JoiningLinks = () => {
           className="button is-large --resize is-warning ma1"
           href="https://www.facebook.com/groups/nodeschoolsm"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <i className="icon ion-logo-facebook f3" />
           <span>Facebook</span>
         </a>
@@ -69,7 +80,8 @@ export const JoiningLinks = () => {
           className="button is-large --resize is-warning ma1"
           href="https://chat.whatsapp.com/JfnmCNgjlaR3A7H8DBFRgz"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           <i className="icon ion-logo-whatsapp f3" />
           <span>Whatsapp</span>
         </a>
@@ -78,24 +90,49 @@ export const JoiningLinks = () => {
   )
 }
 
-export const FacebookFeed = () => {
-  const __html = `<iframe class="facebook-feed" src=https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnodeschoolsm%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>`
+export const MeetUpMembers = () => {
+  const [members, setMembers] = useState([])
+  useState(() => {
+    const _fetch = async () => {
+      const req = await fetch(
+        "https://na9izifwg4.execute-api.us-east-1.amazonaws.com/production/api/meetup"
+      )
+      const data = await req.json()
+      setMembers(data)
+    }
+    members.length || _fetch()
+  }, [members])
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html
-      }}
-      className="flex items-center flex-column justify-center mb5 flex-grow-1"
-      style={{
-        minHeight: "500px"
-      }}
-    />
+    <div className="flex align-center justify-center flex-wrap ma4 mt0">
+      {members.map(({ name, photo = {}, group_profile: { link } }) => {
+        const { thumb_link = false } = photo
+        return thumb_link ? (
+          <a
+            href={link}
+            rel="noopener noreferrer"
+            title={name}
+            alt={name}
+            target="_blank"
+            style={{
+              width: "2.8rem",
+              height: "2.8rem",
+              borderRadius: "100%",
+              background: `url(${thumb_link})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              margin: "2px"
+            }}
+            children=" "
+          />
+        ) : null
+      })}
+    </div>
   )
 }
 
 export const InfoCards = () => {
   return (
-    <div className="columns is-multiline animated fadeIn slow relative pb4 pt6 ph4">
+    <div className="columns is-multiline animated fadeIn slow relative pa4">
       <div className="column is-6 animated fadeIn slower">
         <div className="__card">
           <div className="content">
@@ -174,5 +211,69 @@ export const InfoCards = () => {
         </div>
       </div>
     </div>
+  )
+}
+
+export const PhotoAlbum = () => {
+  const [photos, setPhotos] = useState([])
+  useEffect(() => {
+    const _fetch = async () => {
+      const req = await fetch(
+        "https://na9izifwg4.execute-api.us-east-1.amazonaws.com/production/api/meetup",
+        { headers: { endpoint: "photos" } }
+      )
+      let data = await req.json()
+      data = data.splice(0, Math.round(window.innerWidth / 100))
+      console.log(data.length)
+      setPhotos(data)
+    }
+    photos.length || _fetch()
+  }, [photos])
+  return (
+    <div
+      className="flex items-center justify-end bt bb mt6"
+      style={{ borderColor: "#f0db4f", borderWidth: 2 }}
+    >
+      {photos.map(({ thumb_link }) => {
+        return <img src={thumb_link} alt={thumb_link} style={{ height: 50 }} />
+      })}
+      <Link
+        to="/album"
+        className="button is-radiusless is-warning"
+        style={{ minHeight: 50 }}
+      >
+        <span>Ver album</span>
+        <i className="icon ion-ios-arrow-round-forward f3" />
+      </Link>
+    </div>
+  )
+}
+
+export const ImageLoader = ({ e }) => {
+  const [imageLoaded, setImage] = useState(false)
+  const fetchImage = async () => {
+    let img = await fetch(e.avatar_url)
+    img = await img.blob()
+    img = URL.createObjectURL(img)
+    setImage(img)
+  }
+  useEffect(() => {
+    imageLoaded || fetchImage()
+  }, [imageLoaded])
+  return (
+    imageLoaded && (
+      <a
+        className="grid-item animated fadeIn slower"
+        href={e.html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          className="pic"
+          style={{ backgroundImage: `url(${imageLoaded})` }}
+          title={e.login}
+        />
+      </a>
+    )
   )
 }

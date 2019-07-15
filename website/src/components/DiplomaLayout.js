@@ -64,8 +64,8 @@ export default memo(function({
     pre: {
       normal: {
         position: "absolute",
-        top: "40%",
-        width: "98%",
+        top: "47%",
+        width: "97%",
         right: "47%",
         transform: "rotate(-90deg)",
         fontFamily: "Code",

@@ -1,14 +1,19 @@
 import React from "react"
 import logo from "../assets/img/logo.svg"
 import config from "../assets/js/particlesjs-config"
-import { stargazersMapper, nameParser } from "./Home.helpers"
-import { JoiningLinks, FacebookFeed, InfoCards } from "./Home.parts"
+import { stargazersMapper } from "./Home.helpers"
+import {
+  JoiningLinks,
+  InfoCards,
+  Sponsors,
+  MeetUpMembers,
+  PhotoAlbum
+} from "./Home.parts"
 import { ReactComponent as Bars } from "../assets/img/bars.svg"
 export default class extends React.Component {
   state = {
     stargazers: {},
-    stargazersRows: [],
-    members: []
+    stargazersRows: []
   }
   map = stargazersMapper.bind(this)
   async componentDidMount() {
@@ -21,23 +26,16 @@ export default class extends React.Component {
       "https://api.github.com/repos/nodeschool/sanmiguel/stargazers"
     )
     const stargazers = await _stargazers.json()
-
-    let members = await fetch(
-      "https://na9izifwg4.execute-api.us-east-1.amazonaws.com/production/api/members"
-    )
-    members = await members.json()
-    members = members.sort(() => 0.5 - Math.random())
     this.setState(
       {
-        stargazers,
-        members
+        stargazers
       },
       () => this.map(stargazers)
     )
   }
 
   render() {
-    const { stargazersRows, members } = this.state
+    const { stargazersRows } = this.state
     const Loader = () => (
       <i
         className={`icon ion-md-star ${stargazersRows.length || "is-loader"}`}
@@ -49,7 +47,8 @@ export default class extends React.Component {
           <div className="section flex flex-column h-100">
             <div
               className="flex items-center justify-center w-100"
-              style={{ minHeight: "15rem" }}>
+              style={{ minHeight: "15rem" }}
+            >
               <img
                 src={logo}
                 style={{
@@ -81,16 +80,28 @@ export default class extends React.Component {
                 distintas instituciones de San Miguel, <b>rompiendo</b> así el
                 esquema de estar divididos y logrando convivencia entre miembros
                 aunque estos sean de distintas instituciones.
+                <br />
+                <br />
+                PD: Sabemos que el sitio está feo :'c, ponte en contacto con
+                nosotros si deseas colaborar a dejarlo más bonito.
               </p>
-              <FacebookFeed />
               <div className="has-text-centered hexes-container">
                 <h1
-                  className={`title has-text-centered is-size-2 is-size-4-touch stargazers animated`}>
+                  className={`title has-text-centered is-size-2 is-size-4-touch stargazers animated`}
+                >
                   <Loader /> STARGAZERS <Loader />
                 </h1>
                 <div className="hexes-grid" ref={el => (this.grid = el)}>
                   {stargazersRows}
                 </div>
+              </div>
+              <div className="has-text-centered hexes-container">
+                <h1
+                  className={`title mt4 has-text-centered is-size-2 is-size-4-touch stargazers animated`}
+                >
+                  SPONSORS
+                </h1>
+                <Sponsors />
               </div>
             </div>
             <div className="socials">
@@ -102,7 +113,8 @@ export default class extends React.Component {
                   href="https://web.facebook.com/nodeschoolsm/"
                   className="button is-rounded"
                   rel="noopener noreferrer"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="icon ion-logo-facebook" title="Facebook" />
                 </a>
                 <a
@@ -110,7 +122,8 @@ export default class extends React.Component {
                   className="button is-rounded"
                   title="Twitter"
                   rel="noopener noreferrer"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="icon ion-logo-twitter" />
                 </a>
                 <a
@@ -118,7 +131,8 @@ export default class extends React.Component {
                   className="button is-rounded"
                   title="Instagram"
                   rel="noopener noreferrer"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="icon ion-logo-instagram" />
                 </a>
 
@@ -127,7 +141,8 @@ export default class extends React.Component {
                   className="button is-rounded"
                   title="Github"
                   rel="noopener noreferrer"
-                  target="_blank">
+                  target="_blank"
+                >
                   <i className="icon ion-logo-github" />
                 </a>
               </div>
@@ -136,8 +151,31 @@ export default class extends React.Component {
         </div>
         <div
           className="column is-8-desktop is-9-fullhd is-12-touch has-background-dark relative particles"
-          id="particles">
+          id="particles"
+        >
           <div className="z-1 __cards">
+            <div className="flex items-center justify-end ph4 pt4 NAV flex-wrap">
+              <a
+                href="https://github.com/nodeschool/sanmiguel/blob/master/CODE_OF_CONDUCT.md"
+                rel="noopener noreferrer"
+                className="button --resize is-warning is-outlined is-radiusless"
+                target="_blank"
+              >
+                <i className="icon ion-ios-hand is-size-5" />
+                <span>Codigo de conducta</span>
+              </a>
+
+              <a
+                href="https://nodeschool.io/sanmiguel/#reconocimientos"
+                rel="noopener noreferrer"
+                className="button --resize is-warning is-radiusless"
+                target="_blank"
+              >
+                <i className="icon ion-ios-paper is-size-5" />
+                <span>Reconocimientos</span>
+              </a>
+            </div>
+
             <InfoCards />
             <JoiningLinks />
             <div className="members-container">
@@ -150,52 +188,8 @@ export default class extends React.Component {
                   MIEMBROS
                 </div>
               </div>
-              <div
-                style={{ color: "rgba(255,255,255,.18)" }}
-                className="pa4 flex items-center justify-center w-100 f7 pb0 nb3">
-                *Para estar en este listado unete a slack, y cambia la foto de
-                stock.
-              </div>
-              <div className="members flex align-center justify-center flex-wrap ma4">
-                {members.map(member => {
-                  const {
-                    profile: { real_name, image_192 }
-                  } = member
-                  return (
-                    <div className="member flex items-center justify-center">
-                      <img className="w2 h2" src={image_192} alt={real_name} />
-                      <div className="is-hidden-mobile ml1">
-                        {nameParser(real_name)}
-                      </div>
-                    </div>
-                  )
-                })}
-                <div
-                  className={`member flex items-center justify-center ph2 animated ${
-                    members.length > 0 ? "tada" : "pulse infinite"
-                  }`}>
-                  <div>Total: {members.length}</div>
-                </div>
-              </div>
-              <div className="buttons is-right is-marginless pv5 ph4">
-                <a
-                  href="https://github.com/nodeschool/sanmiguel/blob/master/CODE_OF_CONDUCT.md"
-                  rel="noopener noreferrer"
-                  className="button --resize --custom-white is-light is-outlined"
-                  target="_blank">
-                  <i className="icon ion-ios-hand is-size-5" />
-                  <span>Codigo de conducta</span>
-                </a>
-
-                <a
-                  href="https://nodeschool.io/sanmiguel/#reconocimientos"
-                  rel="noopener noreferrer"
-                  className="button --resize --custom-white is-light"
-                  target="_blank">
-                  <i className="icon ion-ios-paper is-size-5" />
-                  <span>Reconocimientos</span>
-                </a>
-              </div>
+              <MeetUpMembers />
+              <PhotoAlbum />
             </div>
           </div>
         </div>

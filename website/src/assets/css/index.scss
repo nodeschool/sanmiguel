@@ -6,37 +6,6 @@ $yellow: $orange;
 @import "~bulma";
 @import url("~tachyons");
 
-//mixins
-@mixin saw-tooth-vertical($width: 20px, $bg: $orange) {
-  background-image:
-    /* Bottom jagged */ linear-gradient(
-      45deg,
-      $bg 50%,
-      transparent 50%
-    ),
-    linear-gradient(-45deg, $bg 50%, transparent 50%);
-  background-position:
-    /* Bottom jagged */ bottom left, bottom left;
-  background-size: $width $width;
-  background-repeat: repeat-x;
-}
-@mixin saw-tooth-vertical-full($width: 20px, $bg: $orange) {
-  background-image:
-    /* Top jagged */ linear-gradient(
-      135deg,
-      transparent 50%,
-      $bg 50%
-    ),
-    linear-gradient(225deg, transparent 50%, $bg 50%),
-    /* Bottom jagged */ linear-gradient(45deg, transparent 50%, $bg 50%),
-    linear-gradient(-45deg, transparent 50%, $bg 50%);
-  background-position:
-    /* Top jagged */ top left, top left,
-    /* Bottom jagged */ bottom left, bottom left;
-  background-size: $width $width;
-  background-repeat: repeat-x;
-}
-
 //Glitch
 @import "./glitch.css";
 
@@ -70,6 +39,15 @@ body {
 
 //Home component styling
 .Home {
+  .NAV {
+    margin-bottom: calc(100vh + 2rem);
+    @include touch {
+      margin-bottom: unset;
+    }
+    & > * {
+      margin: 0 !important;
+    }
+  }
   .is-loader {
     animation: spinAround 1s infinite linear;
     transform-origin: center center;
@@ -107,38 +85,15 @@ body {
       -webkit-text-fill-color: transparent;
     }
   }
-  .sponsors {
-    @include saw-tooth-vertical-full;
-  }
+
   .members-container {
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.3) 100%
     );
-    @include saw-tooth-vertical;
   }
-  .members {
-    .member {
-      img {
-        border-radius: 100%;
-      }
-      font-size: 0.9rem;
-      background: rgba(white, 0.03);
-      border: solid 2px rgba(white, 0.08);
-      color: rgba(white, 0.66);
-      border-radius: 4px;
-      margin: 0.3em;
-      padding: 0.4em;
-      cursor: grab;
-      &:hover {
-        animation: pulse 0.4s;
-        color: rgba(white, 0.85);
-        background: rgba(black, 0.02);
-        transition: background 0.4s, color 0.3s;
-      }
-    }
-  }
+
   .socials {
     .button {
       width: 3rem;
@@ -222,17 +177,6 @@ body {
   .grid.to-low > * {
     margin: 0 !important;
   }
-  .facebook-feed {
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
-    width: 100%;
-    max-width: 340px;
-    flex-grow: 1;
-    -webkit-animation: fadeIn 2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    animation: fadeIn 2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  }
   .__card,
   .content {
     border: solid 2px $yellow;
@@ -255,19 +199,8 @@ body {
       -webkit-animation: pulse 1.1s forwards;
       animation: pulse 1.1s forwards;
     }
-    &.--custom-white {
-      &.is-light:not(.is-outlined) {
-        background: rgba(white, 0.9);
-      }
-      border: 0;
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
-    }
   }
   .__cards {
-    margin-top: calc(100vh + 2rem);
-    @include touch {
-      margin-top: unset;
-    }
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
