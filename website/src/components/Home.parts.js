@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-
+import { css } from "emotion"
 export const Sponsors = () => {
   const [sponsors, setSponsors] = useState([])
   useEffect(() => {
@@ -113,6 +112,11 @@ export const MeetUpMembers = () => {
             title={name}
             alt={name}
             target="_blank"
+            className={css`
+              &:hover {
+                transform: scale(1.08);
+              }
+            `}
             style={{
               width: "2.8rem",
               height: "2.8rem",
@@ -202,7 +206,7 @@ export const InfoCards = () => {
             </div>
             <h1 className="subtitle has-text-centered">HACÉ DEPLOY</h1>
             <p>
-              Juntáte y agregáte a los <b>miembros activos</b>, así estarás al
+              Juntate y agregate a los <b>miembros activos</b>, así estarás al
               pendiente de las actividades que se realizan cada sábado, además
               podras consultar por las <b>camisetas</b> y demás <b>SWAG</b>{" "}
               disponible.
@@ -234,16 +238,18 @@ export const PhotoAlbum = () => {
       style={{ borderColor: "#f0db4f", borderWidth: 2 }}
     >
       {photos.map(({ thumb_link }) => {
-        return <img src={thumb_link} alt="" style={{ height: 50 }} />
+        return <img src={thumb_link} alt=" " style={{ height: 50 }} />
       })}
-      <Link
-        to="/album"
+      <a
+        href="https://nodeschool.io/sanmiguel/#album"
         className="button is-radiusless is-warning"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ minHeight: 50 }}
       >
         <span>Ver album</span>
         <i className="icon ion-ios-arrow-round-forward f3" />
-      </Link>
+      </a>
     </div>
   )
 }
