@@ -6,7 +6,9 @@ import Diploma from "./components/Diploma"
 import Home from "./components/Home"
 import Pal from "./components/Pal"
 import PalList from "./components/PalList"
+import Album from "./components/Album"
 import "./assets/css/index.scss"
+
 const Routing = () => {
   return (
     <Router basename="/" hashType="noslash">
@@ -16,6 +18,7 @@ const Routing = () => {
         <Route path="/reconocimientos/:pal/:topic" component={Diploma} />
         <Route path="/reconocimientos/:pal" component={Pal} />
         <Route path="/reconocimientos" component={PalList} />
+        <Route path="/album" component={Album} />
         <Route component={NotFound} />
       </Switch>
     </Router>
