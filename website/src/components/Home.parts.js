@@ -224,7 +224,6 @@ export const PhotoAlbum = () => {
       )
       let data = await req.json()
       data = data.splice(0, Math.round(window.innerWidth / 100))
-      console.log(data.length)
       setPhotos(data)
     }
     photos.length || _fetch()
@@ -235,7 +234,7 @@ export const PhotoAlbum = () => {
       style={{ borderColor: "#f0db4f", borderWidth: 2 }}
     >
       {photos.map(({ thumb_link }) => {
-        return <img src={thumb_link} alt={thumb_link} style={{ height: 50 }} />
+        return <img src={thumb_link} alt="" style={{ height: 50 }} />
       })}
       <Link
         to="/album"
