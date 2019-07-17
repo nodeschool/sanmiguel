@@ -13,7 +13,35 @@ export const Sponsors = () => {
     sponsors.length || _fetch()
   }, [sponsors])
   return (
-    <div className="flex items-center justify-center">
+    <div
+      className={css`
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    & a{
+      &:last-child::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom; 0;
+        left: 100%;
+        border-bottom: 4.25rem solid transparent;
+        border-left: 1rem solid white;
+        width: 0;
+      }
+      &:first-child::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom; 0;
+        right: 100%;
+        border-top: 4.25rem solid transparent;
+        border-right: 1rem solid white;
+        width: 0;
+      }
+    }
+    `}
+    >
       {sponsors.map(({ image, slug, site }) => {
         return (
           <a
