@@ -1,10 +1,7 @@
+const siteMetadata = require("./siteMetadata")
 module.exports = {
   pathPrefix: `/sanmiguel`,
-  siteMetadata: {
-    title: `Iorika | Una comunidad de desarrolladores, para desarolladores.`,
-    siteUrl: `https://iorika.com`,
-    description: `Un website crafteado por web devs, para web devs. Acá encontraras, herramientas, posts, cursos y talleres de alta calidad evaluados, bien revisados y sin bullshit para tí.`
-  },
+  siteMetadata,
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -27,14 +24,15 @@ module.exports = {
           include: /([^\.no])\.svg$/
         }
       }
-    },{
+    },
+    {
       resolve: `gatsby-plugin-module-resolver`,
       options: {
         root: `./src`,
         aliases: {
-          "assets": `./assets`,
-          "helpers": `./helpers`,
-          "components": `./components`
+          assets: `./assets`,
+          helpers: `./helpers`,
+          components: `./components`
         }
       }
     }

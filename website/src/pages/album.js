@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { css } from "emotion"
+import { Metas } from "helpers"
 export default () => {
   const [photos, setPhotos] = useState([])
   useEffect(() => {
@@ -15,6 +16,11 @@ export default () => {
   }, [photos])
   return (
     <div className="Album has-background-warning min-vh-100">
+      <Metas
+        description="Un pequeño lugar en el sitio para recordar los codevents ❤"
+        image={require("../assets/img/album.jpg")}
+        title="Nodeschool San Miguel |Album de fotos de los CODEVENTS"
+      />
       <div className="flex pa2 f1 b items-center has-text-black justify-center">
         #ALBUM
       </div>
@@ -28,6 +34,7 @@ export default () => {
             if (!title.includes("CODEVENT")) return null
             return (
               <a
+                key={highres_link}
                 href={highres_link}
                 className={
                   "flex items-center justify-end flex-column " +

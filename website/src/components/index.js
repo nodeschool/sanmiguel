@@ -26,7 +26,7 @@ export const Loader = ({ children, className = "" }) => {
   )
 }
 
-export const Links = ({ to = "", children = null }) => {
+export const Links = ({ to = "../", children = null }) => {
   return (
     <a
       href={to}
