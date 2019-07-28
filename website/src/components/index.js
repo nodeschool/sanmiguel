@@ -1,12 +1,11 @@
 //Part components for all *components* folder tree
 import React from "react"
-import { Link } from "gatsby"
 export const Nav = ({ title = "", to = "/" }) => {
   return (
     <div className="w-100 flex items-start justify-center mb3 bt2">
-      <Link to={to} className="button is-warning mr1">
+      <a href={to} className="button is-warning mr1">
         <i className="icon ion-ios-arrow-back f3" />
-      </Link>
+      </a>
       <h1 className="has-text-centered has-text-left-mobile is-marginless is-size-5-mobile h-100 flex items-center flex-grow-1 justify-center">
         {title}
       </h1>
@@ -29,8 +28,8 @@ export const Loader = ({ children, className = "" }) => {
 
 export const Links = ({ to = "", children = null }) => {
   return (
-    <Link
-      to={to}
+    <a
+      href={to}
       style={{ borderWidth: 2 }}
       className="button  mt1 w-100 is-warning is-inverted is-outlined is-radiusless">
       <div className="w-100 flex items-center justify-start">
@@ -41,6 +40,6 @@ export const Links = ({ to = "", children = null }) => {
         </span>
         <i className="icon ion-ios-arrow-forward" />
       </div>
-    </Link>
+    </a>
   )
 }

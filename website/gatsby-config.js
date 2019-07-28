@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/sanmiguel`,
   siteMetadata: {
     title: `Iorika | Una comunidad de desarrolladores, para desarolladores.`,
     siteUrl: `https://iorika.com`,

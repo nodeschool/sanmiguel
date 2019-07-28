@@ -1,7 +1,7 @@
 import React from "react"
 import config from "assets/js/particlesjs-config"
 import { stargazersMapper } from "helpers/homepage"
-import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import {
   JoiningLinks,
   InfoCards,
@@ -46,6 +46,9 @@ export default class extends React.Component {
     )
     return (
       <main className="Home columns is-mobile is-multiline is-gapless relative">
+        <Helmet>
+          <base href="https://nodeschool.io/sanmiguel/" />
+        </Helmet>
         <div className="column is-12-touch is-4-desktop is-3-fullhd has-background-warning z-5">
           <div className="section flex flex-column h-100">
             <div
@@ -168,15 +171,15 @@ export default class extends React.Component {
                 <span>Codigo de conducta</span>
               </a>
 
-              <Link
-                to="./reconocimientos"
+              <a
+                href="./reconocimientos"
                 rel="noopener noreferrer"
                 className="button --resize is-warning is-radiusless"
                 target="_blank"
               >
                 <i className="icon ion-ios-paper is-size-5" />
                 <span>Reconocimientos</span>
-              </Link>
+              </a>
             </div>
 
             <InfoCards />
