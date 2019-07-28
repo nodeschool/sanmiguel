@@ -13,6 +13,7 @@ const url =
   "https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/"
 
 export default props => {
+  console.log(props)
   const raw=""
   const pal=""
   const pathname=""
