@@ -8,7 +8,7 @@ export default ({ pageContext: { payload } }) => {
           <Nav title="Lista de talleristas/ponentes" />
           <div className="w-100 container-overflowed">
             {payload.map(({ nombre, path }) => {
-              return <Links to={`.${path}`}>{nombre}</Links>
+              return <Links to={`/sanmiguel${path}`}>{nombre}</Links>
             })}
           </div>
         </div>

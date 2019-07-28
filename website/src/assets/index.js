@@ -1,6 +1,6 @@
 const fs = require("fs")
-
 const setDiplomas = async () => {
+  console.log("Building assets...")
   const baseURL = __dirname + "/diplomas"
   const blobilize = blobURL => {
     return `data:image/png;base64,${blobURL}`
@@ -37,6 +37,7 @@ const setDiplomas = async () => {
     baseURL + "/index.js",
     `module.exports = ${JSON.stringify(dic)}`
   )
+  console.log("Done!")
 }
 
 setDiplomas()

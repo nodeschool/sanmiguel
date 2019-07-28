@@ -1,6 +1,6 @@
 //Part components for all *components* folder tree
 import React from "react"
-export const Nav = ({ title = "", to = "/" }) => {
+export const Nav = ({ title = "", to = "../" }) => {
   return (
     <div className="w-100 flex items-start justify-center mb3 bt2">
       <a href={to} className="button is-warning mr1">
