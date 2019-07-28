@@ -1,7 +1,8 @@
 import React from "react"
 import config from "assets/js/particlesjs-config"
 import { stargazersMapper } from "helpers/homepage"
-import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
+import {Metas} from "helpers"
 import {
   JoiningLinks,
   InfoCards,
@@ -44,11 +45,14 @@ export default class extends React.Component {
         className={`icon ion-md-star ${stargazersRows.length || "is-loader"}`}
       />
     )
+    const {
+      data: {
+        site: { siteMetadata }
+      }
+    } = this.props
     return (
       <main className="Home columns is-mobile is-multiline is-gapless relative">
-        <Helmet>
-          <base href="https://nodeschool.io/sanmiguel/" />
-        </Helmet>
+        <Metas {...siteMetadata} />
         <div className="column is-12-touch is-4-desktop is-3-fullhd has-background-warning z-5">
           <div className="section flex flex-column h-100">
             <div
@@ -203,3 +207,17 @@ export default class extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        description
+        url
+        author
+        keywords
+        title
+      }
+    }
+  }
+`

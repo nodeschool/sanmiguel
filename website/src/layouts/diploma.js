@@ -6,6 +6,7 @@ import DiplomaLayout from "components/rawDiploma"
 import "node-snackbar/dist/snackbar.min.css"
 import { ShareBox } from "components/diploma"
 import { renderDiploma, save } from "helpers/diploma"
+import { Metas } from "helpers"
 const moment = require("moment")
 moment.locale("es")
 export default ({ pageContext: { payload, route, name = "NAME" } }) => {
@@ -22,10 +23,12 @@ export default ({ pageContext: { payload, route, name = "NAME" } }) => {
   const [diplomaBlob, setBlob] = useState({ img: null, pdf: null })
   const [modal, showModal] = useState(false)
   const MainLayout = () => {
+    const NAME = nameParser(name)
     return (
       <div className="container content">
+        <Metas title={`Nodeschool San Miguel | ${NAME}`} url={diplomaURL} />
         <div className="pa3 flex flex-column min-vh-100">
-          <Nav title={`${nameParser(name)} / ${titulo}`} />
+          <Nav title={`${NAME} / ${titulo}`} />
           {diploma ? (
             <>
               <div className="flex-grow-1 w-100 items-center justify-center flex">
