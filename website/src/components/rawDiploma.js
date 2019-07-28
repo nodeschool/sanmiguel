@@ -15,17 +15,17 @@ Font.registerHyphenationCallback(word => [word])
 Font.register({
   family: "Roboto",
   src:
-    "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/Roboto-Light.ttf"
+    "https://raw.githack.com/D3Portillo/d3-assets/master/fonts/Roboto-Light.ttf"
 })
 Font.register({
   family: "Roboto-bold",
   src:
-    "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/RobotoCondensed-Bold.ttf"
+    "https://raw.githack.com/D3Portillo/d3-assets/master/fonts/RobotoCondensed-Bold.ttf"
 })
 Font.register({
   family: "Code",
   src:
-    "https://cdn.staticaly.com/gh/D3Portillo/d3-assets/master/fonts/CamingoCode-Regular.ttf"
+    "https://raw.githack.com/D3Portillo/d3-assets/master/fonts/CamingoCode-Regular.ttf"
 })
 
 const getDiplomaIMG = ({ isCodevent, version }) => {

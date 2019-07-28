@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "moment/locale/es"
 import { Nav, Loader } from "components"
 import { nameParser } from "helpers/homepage"
@@ -6,33 +6,18 @@ import DiplomaLayout from "components/rawDiploma"
 import "node-snackbar/dist/snackbar.min.css"
 import { ShareBox } from "components/diploma"
 import { renderDiploma, save } from "helpers/diploma"
-const yaml = require("js-yaml")
 const moment = require("moment")
 moment.locale("es")
-const url =
-  "https://raw.githubusercontent.com/nodeschool/sanmiguel/master/reconocimientos/"
-
-export default props => {
-  console.log(props)
-  const raw=""
-  const pal=""
-  const pathname=""
-  const topic = ""
-  const isRaw = raw === "raw"
-  console.log("isRaw: " + isRaw)
-  const [info, setInfo] = useState(false)
-  const topicKey = topic.split("_").join(" ")
-  const curTopic = info && info.tema[topicKey]
-  const diplomaURL = `https://nodeschool.io/sanmiguel/#${pathname.substr(
-    1
-  )}`.replace(/\/raw$/, "")
+export default ({ pageContext: { payload, route, name = "NAME" } }) => {
+  const diplomaURL = `https://nodeschool.io/sanmiguel${route}`
   const {
-    titulo = false,
-    fecha = false,
-    tipo = false,
+    titulo = "TITULO",
+    fecha = moment.format("DD-MM-YYYY"),
+    tipo = "Charla",
     codevent = false,
     version = "1.0"
-  } = curTopic
+  } = payload
+  const topic = encodeURI(titulo)
   const [diploma, setDiploma] = useState(false)
   const [diplomaBlob, setBlob] = useState({ img: null, pdf: null })
   const [modal, showModal] = useState(false)
@@ -41,14 +26,8 @@ export default props => {
       <div className="container content">
         <div className="pa3 flex flex-column min-vh-100">
           <Nav
-            title={
-              info
-                ? `${info.nombre} / ${titulo}`
-                : `${nameParser(pal.split("_").join(" "))} / ${nameParser(
-                    topicKey
-                  )}`
-            }
-            to={pathname
+            title={`${nameParser(name)} / ${titulo}`}
+            to={route
               .split("/")
               .slice(0, -1)
               .join("/")}
@@ -64,7 +43,7 @@ export default props => {
                   onClick={() =>
                     save({
                       blob: diplomaBlob.img,
-                      name: encodeURI(`${pal}-${topic}`),
+                      name: encodeURI(`${name}-${topic}`),
                       format: "png"
                     })
                   }
@@ -78,7 +57,7 @@ export default props => {
                   onClick={() =>
                     save({
                       blob: diplomaBlob.pdf,
-                      name: encodeURI(`${pal}-${topic}`),
+                      name: encodeURI(`${name}-${topic}`),
                       format: "pdf"
                     })
                   }
@@ -104,30 +83,28 @@ export default props => {
       </div>
     )
   }
-
-  if (diploma && isRaw)
-    window.location.href = diploma.props.style.backgroundImage.slice(4, -1)
+  const canIRender = typeof window !== "undefined" && !diploma
   return (
     <div className="Diploma has-background-warning">
       {modal && <ShareBox data={diplomaURL} onHide={() => showModal(false)} />}
-      {!diploma && info && (
+      {canIRender && (
         <DiplomaLayout
           url={diplomaURL}
           date={moment(fecha, "DD-MM-YYYY").format(
             "dddd DD [de] MMMM [del] YYYY"
           )}
-          name={info.nombre}
+          name={nameParser(name)}
           type={tipo}
           tema={titulo}
           isCodevent={codevent}
           version={version}
           onRender={blob => {
-            console.log("Update")
+            console.log("Updated")
             renderDiploma({ blob, setDiploma, setBlob })
           }}
         />
       )}
-      {isRaw ? <Loader className="vh-100">GENERANDO</Loader> : <MainLayout />}
+      <MainLayout />
     </div>
   )
 }
