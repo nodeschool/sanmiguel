@@ -1,15 +1,15 @@
 import React from "react"
-import logo from "../assets/img/logo.svg"
-import config from "../assets/js/particlesjs-config"
-import { stargazersMapper } from "./Home.helpers"
+import config from "assets/js/particlesjs-config"
+import { stargazersMapper } from "helpers/homepage"
+import { Link } from "gatsby"
 import {
   JoiningLinks,
   InfoCards,
   Sponsors,
   MeetUpMembers,
   PhotoAlbum
-} from "./Home.parts"
-import { ReactComponent as Bars } from "../assets/img/bars.svg"
+} from "components/homepage"
+import Bars from "assets/img/bars.svg"
 export default class extends React.Component {
   state = {
     stargazers: {},
@@ -33,6 +33,9 @@ export default class extends React.Component {
       () => this.map(stargazers)
     )
   }
+  componentWillUnmount() {
+    window.onresize = null
+  }
 
   render() {
     const { stargazersRows } = this.state
@@ -50,7 +53,7 @@ export default class extends React.Component {
               style={{ minHeight: "15rem" }}
             >
               <img
-                src={logo}
+                src={require("../assets/img/logo.no.svg")}
                 style={{
                   width: "14.5rem"
                 }}
@@ -165,15 +168,15 @@ export default class extends React.Component {
                 <span>Codigo de conducta</span>
               </a>
 
-              <a
-                href="https://nodeschool.io/sanmiguel/#reconocimientos"
+              <Link
+                to="/reconocimientos"
                 rel="noopener noreferrer"
                 className="button --resize is-warning is-radiusless"
                 target="_blank"
               >
                 <i className="icon ion-ios-paper is-size-5" />
                 <span>Reconocimientos</span>
-              </a>
+              </Link>
             </div>
 
             <InfoCards />

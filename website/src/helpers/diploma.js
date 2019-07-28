@@ -1,8 +1,8 @@
 import React from "react"
 const FS = require("file-saver")
-const PDFJS = window["pdfjs-dist/build/pdf"] || {}
 
 export const renderDiploma = ({ blob, setDiploma, setBlob }) => {
+  const PDFJS = window["pdfjs-dist/build/pdf"] || {}
   PDFJS.getDocument(URL.createObjectURL(blob)).then(pdf => {
     pdf.getPage(1).then(page => {
       const canvas = document.createElement("canvas")
@@ -32,7 +32,8 @@ export const renderDiploma = ({ blob, setDiploma, setBlob }) => {
               width: "80vw",
               maxWidth: "40rem",
               backgroundImage: `url(${imageURL})`
-            }}>
+            }}
+          >
             <img
               src={imageURL}
               style={{ opacity: 0 }}

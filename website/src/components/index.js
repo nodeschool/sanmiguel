@@ -1,6 +1,6 @@
 //Part components for all *components* folder tree
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link } from "gatsby"
 export const Nav = ({ title = "", to = "/" }) => {
   return (
     <div className="w-100 flex items-start justify-center mb3 bt2">

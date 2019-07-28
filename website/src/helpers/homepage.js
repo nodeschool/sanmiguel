@@ -1,5 +1,5 @@
 import React from "react"
-import { ImageLoader } from "./Home.parts"
+import { ImageLoader } from "components/homepage"
 export const nameParser = _name => {
   /*returns :: "denny      portillo  " => Denny Portillo*/
   const arr = _name.split(new RegExp(/ +/)).map(part => {

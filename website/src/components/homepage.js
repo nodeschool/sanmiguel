@@ -87,7 +87,7 @@ export const JoiningLinks = () => {
           rel="noopener noreferrer"
         >
           <img
-            src={require("../assets/img/discord.svg")}
+            src={require("../assets/img/discord.no.svg")}
             className="mr2"
             alt=""
             style={{ width: "1.5rem" }}
@@ -269,7 +269,7 @@ export const PhotoAlbum = () => {
         return <img src={thumb_link} alt=" " style={{ height: 50 }} />
       })}
       <a
-        href="https://nodeschool.io/sanmiguel/#album"
+        href="/album"
         className="button is-radiusless is-warning"
         target="_blank"
         rel="noopener noreferrer"
