@@ -25,16 +25,7 @@ export default ({ pageContext: { payload, route, name = "NAME" } }) => {
     return (
       <div className="container content">
         <div className="pa3 flex flex-column min-vh-100">
-          <Nav
-            title={`${nameParser(name)} / ${titulo}`}
-            to={
-              "." +
-              route
-                .split("/")
-                .slice(0, -1)
-                .join("/")
-            }
-          />
+          <Nav title={`${nameParser(name)} / ${titulo}`} />
           {diploma ? (
             <>
               <div className="flex-grow-1 w-100 items-center justify-center flex">

@@ -26,6 +26,7 @@
     "tachyons": "^4.11.1"
   },
   "scripts": {
+    "buid:assets": "node src/assets",
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths"
   },
