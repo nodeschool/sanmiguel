@@ -5,7 +5,8 @@ $yellow: $orange;
 //imports, theming
 @import "~bulma";
 @import url("~tachyons");
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
+@import url("https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css");
 //Glitch
 @import "./glitch.css";
 

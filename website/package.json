@@ -8,6 +8,11 @@
     "clipboard-copy": "^3.0.0",
     "emotion": "^10.0.14",
     "file-saver": "^2.0.0",
+    "gatsby": "^2.13.41",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-module-resolver": "^1.0.3",
+    "gatsby-plugin-react-svg": "^2.1.1",
+    "gatsby-plugin-sass": "^2.1.3",
     "js-yaml": "^3.13.1",
     "moment": "^2.24.0",
     "node-sass": "^4.11.0",
@@ -18,10 +23,9 @@
     "react-scripts": "^2.1.1",
     "tachyons": "^4.11.1"
   },
-  "homepage": "./",
   "scripts": {
-    "start": "node ./src/assets/diplomas && react-scripts start",
-    "build": "react-scripts build"
+    "start": "gatsby develop",
+    "build": "gatsby build"
   },
   "license": "MIT",
   "browserslist": [
