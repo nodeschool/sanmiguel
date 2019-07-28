@@ -169,7 +169,7 @@ export default class extends React.Component {
               </a>
 
               <Link
-                to="/reconocimientos"
+                to="./reconocimientos"
                 rel="noopener noreferrer"
                 className="button --resize is-warning is-radiusless"
                 target="_blank"

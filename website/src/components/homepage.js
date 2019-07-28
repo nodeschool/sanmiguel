@@ -269,7 +269,7 @@ export const PhotoAlbum = () => {
         return <img src={thumb_link} alt=" " style={{ height: 50 }} />
       })}
       <a
-        href="/album"
+        href="./album"
         className="button is-radiusless is-warning"
         target="_blank"
         rel="noopener noreferrer"

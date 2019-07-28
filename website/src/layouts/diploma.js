@@ -27,10 +27,13 @@ export default ({ pageContext: { payload, route, name = "NAME" } }) => {
         <div className="pa3 flex flex-column min-vh-100">
           <Nav
             title={`${nameParser(name)} / ${titulo}`}
-            to={route
-              .split("/")
-              .slice(0, -1)
-              .join("/")}
+            to={
+              "." +
+              route
+                .split("/")
+                .slice(0, -1)
+                .join("/")
+            }
           />
           {diploma ? (
             <>
