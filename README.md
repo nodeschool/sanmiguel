@@ -73,30 +73,6 @@ Yaay :zap: :rainbow: cualquier PR es bienvenido, por el momento se sigue la guí
 - [Website src](./website)
 - [Guía de estilos para git](https://github.com/horchatajs/website/blob/master/.github/GIT_STYLEGUIDE.md), psst: tomada de https://github.com/horchatajs
 
-# Organizadores
-
-> Si lo fuiste una vez, seguiras en esta lista <3
-
-<table>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/D3Portillo" title="D3Portillo"><img src="https://avatars1.githubusercontent.com/u/26236985?v=4" width="120"></a>
-</td>
-<td>
-<a href="https://github.com/DavidAlvarado0" title="DavidAlvarado0"><img src="https://avatars2.githubusercontent.com/u/39206627?v=4" width="120"></a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/bryanlopezcodes" title="bryanlopezcodes"><img src="https://avatars2.githubusercontent.com/u/31086167?v=4" width="120"></a>
-</td>
-<td>
-<a href="https://github.com/moudevs" title="moudev"><img src="https://avatars3.githubusercontent.com/u/13499566?v=4" width="120"></a>
-</td>
-</tr>
-</tbody>
-</table>
 
 # “Quiero patrocinarlos”
 
