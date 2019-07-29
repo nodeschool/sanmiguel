@@ -26,7 +26,7 @@ export default ({ pageContext: { payload, route, name = "NAME" } }) => {
     const NAME = nameParser(name)
     return (
       <div className="container content">
-        <Metas title={`Nodeschool San Miguel | ${NAME}`} url={diplomaURL} />
+        <Metas title={NAME} description={titulo} url={diplomaURL} />
         <div className="pa3 flex flex-column min-vh-100">
           <Nav title={`${NAME} / ${titulo}`} />
           {diploma ? (

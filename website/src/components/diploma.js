@@ -1,9 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 const Snackbar = require("node-snackbar")
 const copy = require("clipboard-copy")
 export const ShareBox = ({ onHide = () => null, data = "" }) => {
-  const [addRaw, setRaw] = useState(false)
-  const _data = `${data}${addRaw ? "/raw" : ""}`
   return (
     <div className="modal is-active">
       <div
@@ -15,7 +13,7 @@ export const ShareBox = ({ onHide = () => null, data = "" }) => {
           <div className="flex items-center justify-center">
             <input
               type="text"
-              value={_data}
+              value={data}
               readOnly
               className="input is-radiusless is-light"
             />
@@ -23,7 +21,7 @@ export const ShareBox = ({ onHide = () => null, data = "" }) => {
               title="Copiar al portapeles"
               className="button is-radiusless"
               onClick={() => {
-                copy(_data).then(() => {
+                copy(data).then(() => {
                   Snackbar.show({
                     text: "Copiado a la papelera",
                     backgroundColor: "white",
@@ -33,16 +31,9 @@ export const ShareBox = ({ onHide = () => null, data = "" }) => {
                     duration: 1300
                   })
                 })
-              }}>
+              }}
+            >
               <i className="icon ion-md-clipboard is-size-5" />
-            </div>
-            <div
-              title="Compartir como RAW"
-              className={`button is-radiusless ${addRaw &&
-                "is-black is-outlined"}`}
-              onClick={() => setRaw(!addRaw)}
-              style={{ width: "2.5rem" }}>
-              <div style={{ fontSize: "0.7rem" }}>RAW</div>
             </div>
           </div>
         </div>
