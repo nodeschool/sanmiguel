@@ -64,12 +64,12 @@ export default class extends React.Component {
                 style={{
                   width: "14.5rem"
                 }}
-                className="animated fadeInDown mt5"
+                className="animated fadeIn mt5"
                 alt="logo"
               />
             </div>
             <div className="pa2 pb5 flex-grow-1 flex-column">
-              <div className="animated fadeIn faster banner title is-size-1-touch has-text-centered-touch has-text-dark">
+              <div className="banner title is-size-1-touch has-text-centered-touch has-text-dark">
                 SAN MIGUEL
               </div>
               <p className="has-text-grey-dark has-text-justified animated fadeIn slow pb5">
@@ -172,7 +172,8 @@ export default class extends React.Component {
                 target="_blank"
               >
                 <i className="icon ion-ios-hand is-size-5" />
-                <span>Codigo de conducta</span>
+                <span>Código</span>
+                <span className="is-hidden-mobile">de conducta</span>
               </a>
 
               <a

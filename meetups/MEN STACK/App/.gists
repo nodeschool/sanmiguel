@@ -1,0 +1,4 @@
+app.get("/documents/:format/:type", (req, res) => {
+   const format = req.params.format
+   const type = req.params.type;
+})
