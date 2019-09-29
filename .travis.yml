@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - "10"
 cache:
   directories:
   - website/node_modules
@@ -10,6 +10,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
-  local_dir: website/build
+  local_dir: website/public
   on:
     branch: master

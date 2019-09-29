@@ -4,3 +4,7 @@ tema:
     titulo: "Introducción a Flask"
     fecha: 16-02-2019
     tipo: charla
+  creando apis con python:
+    titulo: Creando API's con Python
+    fecha: 11-05-2019
+    tipo: taller

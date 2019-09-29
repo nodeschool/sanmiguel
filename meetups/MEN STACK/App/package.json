@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.7",
+    "nodemon": "^1.19.1"
+  },
+  "nodemonConfig": {
+    "delay": "2500"
+  }
+}
