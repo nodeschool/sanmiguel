@@ -18,6 +18,9 @@ Para unirte solicita una invitación para ser incluido a la lista de miembros po
 <td align="center">
 <a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/info/instagram.svg" height="50"/><br/>Instagram</a>
 </td>
+<td align="center">
+<a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/info/twitter.svg" height="50"/><br/>Twitter</a>
+</td>
 </tbody>
 </table>
 
