@@ -18,6 +18,9 @@ Para unirte solicita una invitación para ser incluido a la lista de miembros po
 <td align="center">
 <a href="https://www.instagram.com/nodeschoolsm/"><img src="./media/info/instagram.svg" height="50"/><br/>Instagram</a>
 </td>
+<td align="center">
+<a href="https://www.twitter.com/nodeschoolsm/"><img src="./media/info/twitter.svg" height="50"/><br/>Twitter</a>
+</td>
 </tbody>
 </table>
 
@@ -87,5 +90,6 @@ Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se ne
 - Sitio Web: https://nodeschool.io/sanmiguel/
 - Instagram: https://www.instagram.com/nodeschoolsm/
 - Facebook: https://www.facebook.com/nodeschoolsm/
+- Twitter: https://www.twitter.com/nodeschoolsm/
 - GitHub: https://github.com/nodeschool/sanmiguel
 - Email: nodeschoolsm@gmail.com
