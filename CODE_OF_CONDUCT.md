@@ -24,6 +24,8 @@ apropiada, incluyendo la advertencia al delincuente o la expulsión de la comuni
 hostigan, observe que alguien más está siendo hostigado o tiene alguna inquietud, póngase en
 contacto con un organizador de inmediato.
 
+Tampoco esta permitido que ningún miembro realice ninguna actividad procelitista con el fin de recaudar fondos o donaciones sin el consentimiento de los Organizadores.
+
 **Si tiene preguntas o comentarios sobre este Código de conducta, comuníquese con uno de los organizadores.**
 
 Los organizadores de las comunidades anteriores desarrollaron este Código de conducta para regir sus respectivos eventos y canales de comunicación. Utilizamos la política contra el acoso de [PDX Python’s anti-harassment policy](http://www.meetup.com/pdxpython/pages/Code_of_Conduct/)
