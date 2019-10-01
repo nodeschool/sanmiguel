@@ -1,7 +1,7 @@
 # MIEMBROS DE NODESCHOOL SAN MIGUEL.
 |N| Nombre | E-mail |
 |--| ----------- | ----------- |
-|1| Denys Portillo | email |
+|1| Denny Portillo | d3portillo@gmail.com |
 |2| Bryan Bolaños | email |
 |3| Nestor Mendoza | email |
 |4| Dany Beltran | email |
