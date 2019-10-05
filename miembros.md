@@ -1,7 +1,7 @@
 # MIEMBROS DE NODESCHOOL SAN MIGUEL.
 | Nombre | E-mail | Github |
 | ----------- | ----------- | ------ |
-Denny Portillo | d3portillo@gmail.com | [@D3Portillo]([@D3Portillo](https://github.com/D3Portillo))|
+Denny Portillo | d3portillo@gmail.com | [@D3Portillo](https://github.com/D3Portillo)|
 Erick Saravia | email | [@erjosara8916](https://github.com/erjosara8916) 
 Mario Alvarenga | email |
 Nestor Mendoza | email | [@Nes70rMend024 ](https://github.com/Nes70rMend024 )
