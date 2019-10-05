@@ -88,6 +88,10 @@ Yaay :zap: :rainbow: cualquier PR es bienvenido, por el momento se sigue la guí
 
 Queremos que NodeSchool San Miguel sea una comunidad sana, para tal motivo se necesita establecer un código de conducta el cual te invitamos a leer y respetarlo. [Código de Conducta](CODE_OF_CONDUCT.md)
 
+# Miembros
+
+Lista parcial de miembros activos de Nodeschool San Miguel.  [Lista de Miembros](miembros.md)
+
 # Contacto
 
 - Sitio Web: https://nodeschool.io/sanmiguel/
