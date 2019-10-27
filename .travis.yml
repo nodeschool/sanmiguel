@@ -1,15 +1,7 @@
-language: node_js
-node_js:
-  - "10"
-cache:
-  directories:
-  - website/node_modules
-script:
-  - yarn build 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $github_token
-  local_dir: website/public
+  local_dir: website
   on:
     branch: master
