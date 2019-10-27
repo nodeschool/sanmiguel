@@ -1,11 +1,6 @@
 {
   "name": "nodeschoolsm",
-  "version": "0.2.0",
+  "version": "0.0.2",
   "private": false,
-  "scripts": {
-    "start": "cd website && yarn start",
-    "build": "cd website && yarn install && yarn build",
-    "install": "cd website && yarn install"
-  },
   "license": "MIT"
 }
