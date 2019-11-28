@@ -1,1 +1,0 @@
-console.log("Builds a custom 301 site")
