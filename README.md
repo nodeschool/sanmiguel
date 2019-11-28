@@ -1,6 +1,6 @@
 # ¿Te interesa unirte a _NodeSchool San Miguel_?
 
-<img src="./logo.svg" width="320">
+<img src="./logo.svg" width="280">
 
 Para unirte solicita una invitación para ser incluido a la lista de miembros por **SLACK** en donde se ponen notificaciones sobre las actividades de la comunidad, puedes hacerlo en el link de abajo.
 
