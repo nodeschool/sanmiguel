@@ -6,7 +6,7 @@
 
 Para unirte solicita una invitación para ser incluido a la lista de miembros por **SLACK** en donde se ponen notificaciones sobre las actividades de la comunidad, puedes hacerlo en el link de abajo.
 
-[<img src="./media/info/slack.png" width="140">](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWNhZDhhZTg2YzBiODUzMDJiZTg5NjZiMzIzZTg5YTIxMjIwNzRjMzIyMjQwYTA4NWJmZTIyZGQ4MmNmZjYwMTA)
+[<img src="./media/info/slack.png" width="140">](https://join.slack.com/t/nodeschoolsm/shared_invite/enQtNjEzNjc2NjczOTA4LWJhMDlhZTk0MjEyYjViOTVmYjYwNGMwZTdiNGI5MTFjNGEzNWUwN2NmY2FmYjQ1ZTJmZDlmZDQ4NzgyZmE3NzI)
 
 ## Redes sociales 
 
