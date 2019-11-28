@@ -1,7 +1,5 @@
 # ¿Te interesa unirte a _NodeSchool San Miguel_?
 
-[![Build Status](https://travis-ci.org/nodeschool/sanmiguel.svg?branch=master)](https://travis-ci.org/nodeschool/sanmiguel)
-
 <img src="./logo.svg" width="320">
 
 Para unirte solicita una invitación para ser incluido a la lista de miembros por **SLACK** en donde se ponen notificaciones sobre las actividades de la comunidad, puedes hacerlo en el link de abajo.
@@ -27,6 +25,11 @@ Para unirte solicita una invitación para ser incluido a la lista de miembros po
 </tbody>
 </table>
 
+# Código de conducta y otros
+- [Código de conducta](https://www.notion.so/nodeschoolsm/C-digo-de-conducta-bd45d87db2244bd09dc187e699cd08bb)
+- [Manifesto](https://www.notion.so/nodeschoolsm/Manifesto-Nodeschool-San-Miguel-4ce8d7068eeb49fa86ced8187dfdf9fa)
+- [Noder's guide](https://www.notion.so/nodeschoolsm/Noder-s-Guide-12f609c1e9b64a58b93769c808f5cfeb)
+- [Porqué patrocinarnos](http://why.nodeschoolsm.io)
 
 # Contacto
 
