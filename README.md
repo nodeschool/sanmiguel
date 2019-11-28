@@ -30,9 +30,10 @@ Para unirte solicita una invitación para ser incluido a la lista de miembros po
 
 # Contacto
 
-- Sitio Web: https://nodeschool.io/sanmiguel/
+- Sitio Web: https://nodeschoolsm.io/
 - Instagram: https://www.instagram.com/nodeschoolsm/
 - Facebook: https://www.facebook.com/nodeschoolsm/
 - Twitter: https://www.twitter.com/nodeschoolsm/
 - YouTube: http://bit.ly/2nD1pSw
 - Email: nodeschoolsm@gmail.com
+- Linkedin: https://www.linkedin.com/companies/nodeschool-san-miguel
