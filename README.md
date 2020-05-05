@@ -1,6 +1,6 @@
 # El Salvador, Nodeschool San Miguel
-- Hemos movido este repo a un nuevo lugar, más info [acá](https://github.com/Nodeshool-San-Miguel/about)
-- Hey there, we moved the repo, [Go to new repo](https://github.com/Nodeshool-San-Miguel/about)
+- Hemos movido este repo a un nuevo lugar, más info [acá](https://github.com/nodeschoolsm/about)
+- Hey there, we moved the repo, [Go to new repo](https://github.com/nodeschoolsm/about)
 # Contacto / Where to find us
 - Website: https://nodeschoolsm.io/
 - Instagram: https://www.instagram.com/nodeschoolsm/
